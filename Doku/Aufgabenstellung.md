@@ -5,16 +5,16 @@ Lösen eines begrenzten Datenhaltungsproblems mit einem native XML-Datenbanksyst
 
 # Thema
 
-Ziel der Arbeit ist es Systemzustände aus einem Überwachungssystem auszulesen, diese zu speichern und zusammenzufassen auf einer WEB-Seite zu publizieren.
+Ziel der Arbeit ist es Systemzustände aus einem Überwachungssystem auszulesen, diese zu speichern und zusammengefasst auf einer WEB-Seite zu publizieren.
 
 # Ausgangslage
 
-Im Unternehmen existiert ein Überwachungssystem (Nagios) welches das Verhalten von der IT-Infrastruktur misst. Es ist nicht möglich für Benutzer verständliche Übersichten zu erstellen, in denen ersichtlich ist, welche Systeme ordnungsgemäss arbeiten und welche nicht.
+Im Unternehmen existiert ein Überwachungssystem (Nagios) welches das Verhalten von der IT-Infrastruktur misst. Es ist nicht möglich für Benutzer verständliche Übersichten zu erstellen, aus denen ersichtlich ist, welche Systeme ordnungsgemäss arbeiten und welche nicht.
 
 
 # Ziele der Arbeit
 
-Das Ziel der Seminararbeit besteht darin, die Zustände des Überwachungssystems periodisch auszulesen, zu speichern und auf einem WEB-GUI zu präsentieren. Es sollen auch ausfälle in einem Log zugänglich gemacht werden.
+Das Ziel der Seminararbeit besteht darin, die Zustände des Überwachungssystems periodisch auszulesen, zu speichern und auf einem WEB-GUI zu präsentieren. Es sollen auch Ausfälle in einem Log ersichtlich gemacht werden.
 
 # Aufgabenstellung
 
