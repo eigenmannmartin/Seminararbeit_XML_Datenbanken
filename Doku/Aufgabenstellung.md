@@ -37,7 +37,7 @@ R2 Konzept:
 - Dokumentation des Konzepts
 R3 Umsetzung:
 - Implementation eines Prototyp
-R5 Review:
+R4 Review:
 - Dokumentation des umgesetzten Konzepts
 
 # Termine
