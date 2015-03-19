@@ -5,40 +5,41 @@ Lösen eines begrenzten Datenhaltungsproblems mit einem native XML-Datenbanksyst
 
 # Thema
 
-Ziel der Arbeit ist es Systemzustände aus einem Überwachungssystem auszulesen, diese zu speichern und zusammengefasst auf einer WEB-Seite zu publizieren.
+Ziel der Arbeit ist es den Zustand der IT-Systeme auf einer Webseite zu publizieren, so dass Mitarbeiter eine Übersichtliche Zusammenfassung der Lauffähigkeit der Systeme erhalten.
 
 # Ausgangslage
 
-Im Unternehmen existiert ein Überwachungssystem (Nagios) welches das Verhalten von der IT-Infrastruktur misst. Es ist nicht möglich für Benutzer verständliche Übersichten zu erstellen, aus denen ersichtlich ist, welche Systeme ordnungsgemäss arbeiten und welche nicht.
+Im Unternehmen existiert ein Überwachungssystem (Neteye) welches das Verhalten von der IT-Infrastruktur misst. 
 
+Mitarbeiter (keine IT-Mitarbeiter) können bis anhin den aktuellen Zustand der IT-Systeme nicht abfragen, da Neteye dafür keine geeigneten Funktionalitäten bietet.
 
 # Ziele der Arbeit
 
-Das Ziel der Seminararbeit besteht darin, die Zustände des Überwachungssystems periodisch auszulesen, zu speichern und auf einem WEB-GUI zu präsentieren. Es sollen auch Ausfälle in einem Log ersichtlich gemacht werden.
+Alle Mitarbeiter sollen auf einer zentralen Webseite den aktuellen Status aller IT-Systeme, ohne Fachwissen verständlich, abfragen können. Darüber hinaus muss ein Mitarbeiter erkennen können ob Fehler in der Vergangenheit (letzte 48h) aufgetreten sind.
+
 
 # Aufgabenstellung
 
 A1 Recherche:
-- Definition der Fachbegriffe
 - Erarbeitung der technischen Grundlagen
+- Problemanalyse (Welche Möglichkeiten zur Abfrage stehen Mitarbeitern bereits zur Verfügung? Woher und welche Daten können für die Problemlösung verwendet werden?)
 A2 Konzept:
-- Konzeption eines Prototypen
+- Konzeption eines Prototypen. Der Prototyp muss den Status der IT-Systeme (SAP, Fileserver, Netzwerk, Entwicklungsserver, Repository-Server) sowie Fehlerfälle der der letzten 48h anzeigen.
 A3 Umsetzung:
 - Implementation eines Prototypen
 A4 Review:
-- Bewertung des umgesetzten Konzepts
+- Bewertung des umgesetzten Konzepts. Erfüllt der Prototyp die Anforderung der Fragestellung?
 
 # Erwartete Resultate
 
 R1 Recherche:
-- Glossar mit Fachbegriffen
-- Erläuterung der WLAN-Standards
+- Bestandsaufnahme und Anforderungsanalyse
 R2 Konzept:
-- Dokumentation des Konzepts
+- Konzeption des Prototypen
 R3 Umsetzung:
 - Implementation eines Prototyp
 R4 Review:
-- Dokumentation des umgesetzten Konzepts
+- Bewertungsergebnisse
 
 # Termine
 
