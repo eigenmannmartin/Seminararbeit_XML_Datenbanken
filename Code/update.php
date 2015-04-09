@@ -17,7 +17,7 @@ try
 		$out = curl_exec($ch);
 
 		$obj = json_decode( $out, true );
-		$Services[ $data[0] ][ $Service ] = $obj[0];
+		$Services[ $data[0] ][ $Service ] = $data[4]( $obj );
 	}
 	
 
@@ -35,6 +35,7 @@ try
 			
 			$query .= "<Service> 
 							<Servicename>".$S."</Servicename>
+							<Performance>".$s['performance']."</Performance>
 							<State>".$s['state']."</State>
 					   </Service>";
 				
