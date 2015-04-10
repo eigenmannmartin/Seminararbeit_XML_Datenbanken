@@ -18,12 +18,34 @@ class DB
 
     	$result = $this->db->xquery($query) or die ($this->db->getError()); //Execute query
 
-
     	$xml = simplexml_load_string( $result["XML"] );
 		$json = json_encode($xml);
 		$array = json_decode($json,TRUE);
 
     	return $array;
+    }
+
+    public function readpaststate( $Region ){
+    	$date = date('U', strtotime('-2 day'));
+    	//where Service[State>0]
+    	$query = '
+    		(for $checks in doc("'._DB_.'")//areas/area[areaname="'.$Region.'"]//Check[Date>'.$date.']//Service[State>0]
+    		order by $checks/Date descending
+    		return $checks)';
+
+    	$result = $this->db->xquery($query) or die ($this->db->getError()); //Execute query
+
+    	$ret = array();
+    	foreach ($result['XML'] as $value) {
+    		$xml = simplexml_load_string( $value );
+			$json = json_encode($xml);
+			$array = json_decode($json,TRUE);
+
+			if( !isset($ret[$array['Servicename']]) || $ret[$array['Servicename']] < $array['State'] )
+				$ret[$array['Servicename']] = [ $array['State'], $array['Performance'] ];
+    	}
+
+    	return $ret;
     }
 
     public function insert($data, $Region){

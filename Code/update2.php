@@ -42,7 +42,6 @@ try
 		}
 	}
 
-	var_dump($q);
 	
 	$DB->insert($q, $Region);
 	$DB->close();
