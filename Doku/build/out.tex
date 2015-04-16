@@ -1,0 +1,635 @@
+\documentclass[oneside,11pt,parskip=half,ngerman]{scrreprt}
+%\documentclass[a4paper,oneside,11pt,parskip=half,ngerman]{scrreprt}
+\usepackage{typearea}
+
+\usepackage[ngerman]{babel}
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[expert]{mathdesign}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyhdr}
+\usepackage{rotating}
+\usepackage{titlesec}
+\usepackage{mathptmx}
+\usepackage{amssymb} % checkmark
+% \usepackage{helvet}
+\usepackage[scaled]{uarial}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[squaren]{SIunits}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage[absolute]{textpos}
+\usepackage{makeidx}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{scrhack}
+\usepackage{fancyhdr}
+\usepackage{fancyvrb}
+
+\usepackage[section]{placeins}
+
+\usepackage{pdfpages}
+
+\usepackage[firstpage]{draftwatermark}
+
+%Typesetting
+\usepackage[activate=true,final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}
+              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
+               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
+
+% Bibliography
+\usepackage[backend=bibtex]{biblatex}
+\usepackage{csquotes}
+\bibliography{./Citer}
+
+
+%define page margin
+\geometry{a4paper, top=30mm, left=30mm, right=30mm, bottom=30mm,headsep=10mm,footskip=10mm}
+
+\usepackage{tocloft}
+\setlength\cftbeforetoctitleskip{-2.5em}
+\setlength\cftbeforeloftitleskip{-2.5em}
+\setlength\cftbeforelottitleskip{-2.5em}
+
+
+
+
+\usepackage{graphicx}
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth,height=20em,keepaspectratio]{#1}}
+
+
+% Chapter styling
+\usepackage[grey]{quotchap}
+\makeatletter 
+\renewcommand*{\chapnumfont}{%
+  \usefont{T1}{\@defaultcnfont}{b}{n}\fontsize{80}{100}\selectfont% Default: 100/130
+  \color{chaptergrey}%
+}
+\makeatother
+
+\begin{titlepage}
+\title{\bigskip \bigskip Herstellen einer WLAN Verbindung über grosse Distanzen}
+\author{Martin Eigenmann}
+
+%\include{../content/Titelblatt.tex}
+%\includepdf[pages=1]{../content/Titelblatt}
+
+\end{titlepage}
+
+\begin{document}  
+\maketitle
+
+\pagenumbering{roman}
+
+\chapter{Abstract}\label{abstract}
+
+asdf
+
+\setcounter{tocdepth}{1}
+
+\chapter{Inhaltsverzeichnis}\label{inhaltsverzeichnis}
+
+\renewcommand{\contentsname}{} 
+
+\begingroup\let\clearpage\relax
+\tableofcontents
+\endgroup
+
+\microtypesetup{protrusion=true}
+
+\newpage
+
+\pagenumbering{arabic}
+
+\chapter{Einleitung}\label{einleitung}
+
+\section{Motivation und
+Fragestellung}\label{motivation-und-fragestellung}
+
+Wer kennt das nicht, das mobile Datennetz ist langsam oder das
+Datenvolumen ist bereits aufgebraucht. Im entscheidenden Moment lädt das
+Bild oder Video nicht. Wäre es nicht viel angenehmer überall WLan
+Empfang zu haben.
+
+\begin{quote}
+Zuhause ist, wo sich das WLan selbst verbindet.
+\end{quote}
+
+Diese Arbeit soll aufzeigen wo die Grenzen von WLan liegen und ob die
+Grenzen vielleicht doch etwas entfernter liegen als intuitiv vermutet.
+
+\section{Aufgabenstellung}\label{aufgabenstellung}
+
+Im Folgenden ist die Aufgabenstellung gemäss EBS aufgeführt.
+
+\subsection{Thema}\label{thema}
+
+Ziel der Arbeit ist es ein mit WLAN weit über die spezifizierte Distanz
+eine Datenverbindung auf zu bauen.
+
+\subsection{Ausgangslage}\label{ausgangslage}
+
+Mobile Geräte besitzen meist eine ständige Verbindung ins WWW. Ist es
+aber auch möglich grosse Distanzen nur mit bekannten WLAN-Technologie zu
+überwinden und so von Drittanbietern unabhängig zu werden? Welche
+Voraussetzungen müssen dafür erfüllt werden?
+
+\subsection{Ziele der Arbeit}\label{ziele-der-arbeit}
+
+Das Ziel der Seminararbeit besteht in der Analyse der Möglichkeiten mit
+bekannten WLAN-Komponenten grössere Distanzen (im Bereich von
+Kilometern) zu überbrücken. Es soll theoretisch und praktisch ergründet
+werden, wo die Grenzen der WLAN-Technologie liegen und ob mit leichten
+Modifikationen der Sende- und Empfangs-Geräte höhere Distanzen
+überbrückt werden können.
+
+\subsection{Aufgabenstellung}\label{aufgabenstellung-1}
+
+A1 Recherche:\\- Definition der Fachbegriffe\\- Erarbeitung der
+technischen Grundlagen\\A2 Analyse:\\- Analyse der Limitationen der der
+WLAN-Standards\\A3 Konzept:\\- Konzeption von Vorschlägen um die
+Reichweite zu erhöhen\\A4 Umsetzung:\\- Umsetzung von zwei
+Lösungsvorschlägen\\A5 Review:\\- Bewertung der umgesetzten
+Lösungsvorschlägen
+
+\subsection{Erwartete Resultate}\label{erwartete-resultate}
+
+R1 Recherche:\\- Glossar mit Fachbegriffen\\- Erläuterung der
+WLAN-Standards\\R2 Analyse:\\- Dokumentation der Limitationen im Bezug
+auf die Reichweite und Übertragungsrate der WLAN-Standards.\\R3
+Konzept:\\- Dokumentation der Konzepte der Lösungsvorschläge\\R4
+Umsetzung:\\- Dokumentation der Umsetzung der beiden
+Lösungsvorschläge\\R5 Review:\\- Dokumentation der Bewertung der
+Lösungsvorschläge
+
+\chapter{Projektplanung}\label{projektplanung}
+
+\section{Projektplan}\label{projektplan}
+
+Die Seminararbeit muss im Zeitraum von 04.03.2015 bis 10.06.2015
+durchgeführt werden. Der praktische Teil der Arbeit wurde in der Woche
+von 06.04.2015 bis 12.04.2015 durchgeführt.
+
+\section{Zeitlicher Rahmen}\label{zeitlicher-rahmen}
+
+Der offizielle Projektstart erfolgt mit dem Kick-Off am 04.03.2015.
+Spätestens am 27.05.2015 muss ein Draft eingereicht werden. Am 17. und
+18.06.2015 finden die Präsentationen statt.
+
+Der Aufwand für die Bearbeitung der Seminararbeit soll mindestens 50
+Stunden umfassen.
+
+\section{Organisatorischer Rahmen}\label{organisatorischer-rahmen}
+
+In der nachstehenden Tabelle sind alle massgeblich involvierten Personen
+aufgeführt.
+
+\begin{longtable}[c]{@{}ll@{}}
+\caption{Involvierte Personen}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.39\columnwidth}\raggedright\strut
+Personen
+\strut\end{minipage} &
+\begin{minipage}[b]{0.55\columnwidth}\raggedright\strut
+Kontakt
+\strut\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.39\columnwidth}\raggedright\strut
+Personen
+\strut\end{minipage} &
+\begin{minipage}[b]{0.55\columnwidth}\raggedright\strut
+Kontakt
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.39\columnwidth}\raggedright\strut
+\textbf{Dr.~Reto Knaack}\\(Studeingangs Leiter)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
+ZHAW Standort Zürich\\Lagerstrasse 41 / 8004 Zürich\\Reto.Knaack@zhaw.ch
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright\strut
+\textbf{Peter Egli}\\(Lehrperson)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
+ZHAW Standort Zürich\\Lagerstrasse 41 / 8004 Zürich\\eglp@zhaw.ch
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.39\columnwidth}\raggedright\strut
+\textbf{Martin Eigenmann}\\(Student)
+\strut\end{minipage} &
+\begin{minipage}[t]{0.55\columnwidth}\raggedright\strut
+Harfenbergstrasse 5 / 9000 St.Gallen\\study@eigenmannmartin.ch
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\chapter{Analyse}\label{analyse}
+
+\section{Fachliche Grundlagen}\label{fachliche-grundlagen}
+
+Mit Wireless Local Area Network, kurz WLAN, wird gemeinhin der
+IEEE-802.11 assoziiert. Die Tabelle \ref{standards} zeigt die bisher
+freigegebenen Standards.
+
+\begin{longtable}[c]{@{}lll@{}}
+\caption{Standards \label{standards}\\}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+Standard
+\strut\end{minipage} &
+\begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+Frequenzband
+\strut\end{minipage} &
+\begin{minipage}[b]{0.24\columnwidth}\raggedright\strut
+Datenrate (max)
+\strut\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.15\columnwidth}\raggedright\strut
+Standard
+\strut\end{minipage} &
+\begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+Frequenzband
+\strut\end{minipage} &
+\begin{minipage}[b]{0.24\columnwidth}\raggedright\strut
+Datenrate (max)
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.15\columnwidth}\raggedright\strut
+802.11\\802.11b\\802.11g\\802.11a\\802.11h\\802.11n\\802.11n\\802.11ac\\802.11ad
+\strut\end{minipage} &
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+2.4 GHz\\2.4 GHz\\2.4 GHz\\5 GHz\\5 GHz\\2.4 GHz\\5 GHz\\5 GHz\\60 GHz
+\strut\end{minipage} &
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+2 Mbit/s\\6 Mbit/s\\22 Mbit/s\\22 Mbit/s\\54 Mbit/s\\450 Mbit/s\\450
+Mbit/s\\660 Mbit/s\\6,7 Gbit/s
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Antenne}\label{antenne}
+
+Idealerweise ist eine Antenne ein Rundstrahler, welcher eine
+gleichförmige Sendeleistung aufweist. Üblicherweise werden aber Antennen
+verwendet, welche das Signal richten, also zum Beispiel in der
+Vertikalen weniger Leistung aufweisen, in der Horizontalen dafür
+weitreichender sind. So haben handelsübliche Stabantennen von Routern
+eine Verstärkungswirkung um den Faktor zwei in der horizontalen Ebene.
+
+\subsection{Sendeanlage}\label{sendeanlage}
+
+Eine Sendeanlage umfasst die Sendeeinheit (WLAN-Karte), Antennenkabel
+und Antenne. Dazugehörend sind auch anfällige Steckverbinder.
+
+\section{Technische Limitationen}\label{technische-limitationen}
+
+Das elektromagnetische Signal einer WLAN Anlage wird durch das
+Übertragungsmedium (Luft) gedämpft. Dies wird als Freiraumdämpfung wie
+folgt beschreiben wenn \(f\) die Frequenz und \(c\) die
+Lichtgeschwindigkeit ist.
+
+\(F = (\frac{4\pi r * f }{c})^2\)
+
+Für die Frequenz 2.4GHz ergibt sich eine Freiraumdämpfungs-Kurve wie in
+Abbildung \ref{fig:fa} gezeigt.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/Freiraumdaempfung.png}
+\caption{Freiraumdaempfung\label{fig:fa}}
+\end{figure}
+
+Neben der Freiraumdämpfung, vermindern auch das Signalkabel vom Sender
+zur Antenne und Steckverbinder die Ausgangsleistung der gesamten Anlage.
+Gängige Antennenkabel weisen eine Dämpfung von 117.9dB/100m bis
+16.0dB/100m auf. Steckverbinder dämpfen zusätzlich mit 0.2dB bis 0.5dB.
+
+Moderne Wlan-Geräte besitzen eine Empfangsempfindlichkeit von bis zu
+-96dBm bei 1Mbps. Bei höheren Übertragungsraten nimmt die
+Empfangsempfindlichkeit systembedingt ab. So sind bei 54Mbps bei guten
+Endgeräten -73dBm zu erwarten.
+
+Bei einer Sendeleistung von genau 20dBm (entspricht 100mW) und unter
+Verwendung eines isotropen Kugelstrahler (einer idealen
+Rundstrahlentanne) können bei einer Empfangsempfindlichkeit von -73dBm
+maximal 443m Distanz überwunden werden. In der Praxis werden weder 20dBm
+Ausgangsleistung erreicht noch existieren störungsfreie Räume.
+
+\section{Rechtliche Limitationen}\label{rechtliche-limitationen}
+
+Die rechtliche Beschränkungen sind je nach Einsatzgebiet unterschiedlich
+und werden in der Schweiz vom Bundesamt für Kommunikation
+vorgeschrieben.
+
+\subsection{2.4 GHz Frequenzband}\label{ghz-frequenzband}
+
+Die Leistung der gesamten Anlage ist im 2.4 GHz Band auf maximal 100mW
+begrenzt. \autocite{bakomwlan}
+
+\subsection{5 GHz Frequenzband}\label{ghz-frequenzband-1}
+
+Die Leistung der Anlage ist für das untere 5 GHz Frequenzband (5.15 -
+5.35 GHz) ist auf maximal 100mW (200mW falls die Anlage TPC unterstützt)
+und für das obere 5 GHz Frequenzband (5.47 - 5.725 GHz) auf maximal
+500mW (1000mW falls die Anlage TPC unterstützt) begrenzt.
+\autocite{bakomwlan}
+
+\chapter{Konzept}\label{konzept}
+
+Im Rahmen dieser Arbeit sollen Lösungsvorschläge erarbeitet werden, die
+die Reichweite von idealen Rundstrahlen weiter erhöhen können.
+
+\section{Verminderung der Dämpfung}\label{verminderung-der-duxe4mpfung}
+
+Um die Ausgangsleistung zu maximieren, muss die Dämpfung zwischen Sender
+und Antenne minimiert werden. Dies wird duch wenige jedoch qualitativ
+hochwertige Steckverbinder und sehr kurze Signalkabel sichergestellt.
+
+\section{Erhöhung der
+Sendeleistung}\label{erhuxf6hung-der-sendeleistung}
+
+Die maximal zulässige Sendeleistung vom 20dBm wird nicht von allen
+WLan-Karten untersützt. Der Ubiquiti SuperRange Cardbus kann bei einer
+Übertragungsrate von 54Mbps, immer noch mit einer Sendeleistung von
+20dBm operieren. Unterhalb Übertragungsraten von 24Mbps sind sogar 24dBm
+möglich.\\
+
+Zu beachten ist, dass die Ausgangsleistung (dBm) logarithmisch von der
+Sendeleistung (mW) der WLan-Karte abhängig ist. So bringt doppelte
+Sendeleistung nicht die doppelte Ausgangsleistung.
+
+\hyperdef{}{richtstrahlantenne}{\section{Richtstrahlantenne}\label{richtstrahlantenne}}
+
+Statt einen Rundstrahler zu verwenden, kann auch eine gerichtete
+Verstärkung des Signals vorgenommen werden. Dazu werden typischerweise
+Richstrahlantennen eingesetzt.\\Neben der Yagi-Uda-Antenne,
+Wendelantenne und der Quadantenne gibt es auch
+Parabolantennen.\\Yagi-Uda-Antennen erreichen eine Richtverstärkung von
+3dBi bis 18dBi. Ähnlich stark sind auch Quadantennen sowie
+Wendelantennen. Parabolantennen erreichen hingegen Antennengewinne von
+20dBi bis weit über 50dBi hinaus. Die Signalausbreitung der
+verschiedenen Antennen unterscheiden sich sehr im Öffnungswinkel
+(Strahlbreite) der Hauptkeule, sowie der Aubildung von Neben- und
+Rückkeulen.
+
+Die im Rahmen dieser Arbeit verwendeten Richstrahlantennen sind eine
+Yagi-Uda-Antenne mit einem Antennengewinn von 9.8 dBi bzw. 18dBi.\\
+
+Die verwendete Parabolantenne hat einen Antennengewinn von ca. 30dBi.
+(Da es sich um eine selbstgebaute Parabolantenne handelt, konnte der
+Antennengewinn nicht genau ermittelt werden, da die dafür benötigten
+Messinstrumente nicht zu Verfügung standen.)\\
+
+\chapter{Umsetzung}\label{umsetzung}
+
+\section{Vorgehen und Messungen}\label{vorgehen-und-messungen}
+
+Es wird nur eine Messung durchgeführt falls auch eine Verbindung
+hergestellt werden kann. Zur Messung der Signalstärke wird das
+Linux-Tool \(wavemon\) verwendet.
+
+\section{Richtstrahlantenne}\label{richtstrahlantenne-1}
+
+Um das WLAN-Signal zu verstärken, wird eine Yagi-Uda-Antenne mit einem
+Reflektor, einem Signalgeber und fünf Direktoren verwendet. (Siehe
+Abbildung \ref{fig:routeryagi}) Dabei handelt es sich um einen Eigenbau.
+Bauanleitungen mit detaillierten Beschreibungen und
+Hintergrundinformationen sind online verfügbar. \autocite{eigenbauyagi}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/router-yagi.jpg}
+\caption{RouterYagi\label{fig:routeryagi}}
+\end{figure}
+
+Der Antennengewinn liegt bei 9.8dBi. Bei einer Entfernung von 200 Metern
+und einer Ausgangsleistung von 16dB, ist mit -60dBm Empfangslevel zu
+rechnen.
+
+Bei einer Distanz von 200 Metern ist ohne ein modifiziertes Gegenstück
+also immer noch eine sehr gute Verbindung erreichbar. Mit einem
+handelsüblichen Notebook sind genau -60dBm gemessen worden. (dazu
+Abbildung \ref{fig:router-yagi-reg})
+
+\section{Richtstrahlantenne II}\label{richtstrahlantenne-ii}
+
+Die nächst grössere Distanz, die überwunden werden soll, beträgt mehr
+als 1100 Meter. Da mit der selbst gebauten Yagi-Uda-Antenne kein
+Verbindungsaufbau möglich war, ist eine bessere Antenne nötig.
+
+Mit zwei aufeinander ausgerichteten Yagi-Uda-Antennen vom Typ ABAKS
+YAGI-18 die mit jeweils 15 Direktoren einen Antennengewinn von 18dBi
+aufweisen und einer Sendeleistung von 21.1dB bzw. 22.3dB ist
+idealerweise mit einem Empfangslevel von -60dBm zu rechnen.
+
+Die Sendeleistung von 21.1dB bzw. 22.3dB ergibt sich aus den 24dB
+maximaler Sendeleistung der WLAN-Karte abzüglich der 2.9dB bzw. 1.7dB
+Dämpfung für Kabel und Verbinder.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/yagi-wald.jpg}
+\caption{ABAKS YAGI-18 im Wald\label{fig:yagi-18}}
+\end{figure}
+
+Das gemessene Empfangslevel von -80dBm (dazu Abbildung
+\ref{fig:yagi-reg}) bzw. die Differenz von 20dBm zu dem erwarteten
+Ergebniss, ist den störenden Objekten im Funkpfad geschuldet.
+
+\section{Parabolspiegel}\label{parabolspiegel}
+
+Die grösste mögliche Distanz mit Sichtverbindung, welche im Rahmen
+dieser Arbeit betrachtet wird, beträgt bei 8340 Metern.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/parabol-point.jpg}
+\caption{Parabolantenne ausgerichtet auf das 8340 Meter entfernte
+Gegenstück\label{fig:parabol-point}}
+\end{figure}
+
+Die WLAN-Parabolantenne ist eine Improvisation um die Richtwirkung der
+Yagi-Uda-Antenne weiter zu erhöhen. Es handelst sich dabei um einen
+Handelsüblichen Parabolspiegel, der auch für Satellitenfernsehen
+eingesetzt wird. Der Antennengewinn beträgt ca. 30dBi. (Abbildung
+\ref{fig:parabolantenne})
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/parabol.png}
+\caption{Parabolantenne\label{fig:parabolantenne}}
+\end{figure}
+
+Mit der Parabolantenne mit einer Sendeleistung 22.3dB und der darauf
+ausgerichteten Yagi-Uda-Antenne mit einem Antennengewinn von 18dBi und
+einer Sendeleistung von 21.1dB ist idealerweise ein Empfangslevel von
+-66dBm erreichbar.
+
+Der gemessene Signalpegel beträgt -67dBm. (dazu Abbildung
+\ref{fig:parabolantenne-reg})
+
+\chapter{Review und Bewertung}\label{review-und-bewertung}
+
+Die 3 umgesetzten Antennenkonzepte erfüllen unterschiedliche
+Anforderungen. Bewertet werden die Konzepte und deren Umsetzung deshalb
+in Bezug auf Reichweite, Handhabbarkeit, Einsatzgebiet und Kosten.
+
+\section{Richtstrahlantenne}\label{richtstrahlantenne-2}
+
+Die Reichweite verdoppelt sich auf \textasciitilde{} 200 Meter. Der Bau
+sowie die Installation erfordern kein spezifisches Fachwissen und sind
+sehr einfach und schnell zu erledigen; Sofern der Router über externe
+Antennen verfügt.\\Typischerweise können so Funklöcher innerhalb einer
+Wohnung oder Wohnkomplex abgedeckt werden.\\Die Kosten belaufen sich auf
+wenige Rappen bis Franken.
+
+\section{Richtstrahlantenne II}\label{richtstrahlantenne-ii-1}
+
+Die Reichweite steigert sich enorm. Im Test war über 1 Kilometer
+Funkstrecke überbrückbar. Die Installation erfordert kein spezifisches
+Fachwissen, lediglich die Ausrichtung der Antennen muss sehr sorgfältig
+durchgeführt werden. Diese Art von Richtstrahlantennen setzen ausserdem
+voraus dass auf Empfänger- und Sender-Seite Modifikationen vorgenommen
+werden und fordern daher einen grösseren Aufwand bei der
+Installation.\\Typischerweise wird mit Leistungsstarken
+Yagi-Uda-Antennen ein Kommunikationskanal über Gebäudegrenzen hinweg
+realisiert.\\Die Kosten belaufen sich auf \textasciitilde{}100 CHF.
+
+\section{Parabolspiegel}\label{parabolspiegel-1}
+
+Die Reichweite scheint fast unbegrenzt. Im Test konnten mehr als 8
+Kilometer Funkstrecke überwunden werden. Die Installation erfordert
+Fachwissen und Geduld bei der Ausrichtung der Antennen. Üblicherweise
+werden auch Sendekarten mit höheren Ausgangsleistungen verwendet, um so
+an der Antenne die maximal erlaubten 20dB zu erreichen.\\Parabolantennen
+werden nur selten im zivilen Umfeld verwendet und so müssen nur
+vereinzelt unzugängliche Ortschaften so erschlossen werden.\\Die Kosten
+bewegen sich je nach verwendetem Parabolspiegel und Antenne im gehobenen
+drei stelligen Franken Bereich.
+
+\section{Bewertung}\label{bewertung}
+
+Sowohl bezüglich der Leistung als auch der Handhabung überzeugt die
+eingesetzte Yagi-Uda-Antenne. Einfache Installation und grossartige
+Leistung um grosse Distanzen zu überbrücken runden das Paket
+hab.\\Selbstgebaute Yagi-Uda-Antennen überzeugen zwar für den
+Heimgebrauch. Ihre Leistungsfähigkeit ist für einen professionellen
+Gebrauch ist jedoch ungeeignet.\\Grosse Parabolantennen überzeugen zwar
+in Puncto Leistung, haben jedoch bei Handhabung und Preis deutliche
+Defizite.
+
+\chapter{Fazit und Schlusswort}\label{fazit-und-schlusswort}
+
+Bereits mit einfachen und kosteneffizienten Mitteln (siehe. Kapitel
+\hyperref[richtstrahlantenne]{Richtstrahlantenne}) kann die Reichweite
+von handelsüblichen WLAN-Routern erhöht werden. Um die Reichweite in der
+nahen Umgebung gezielt zu erhöhen, und so z.B. den Empfang im Garten zu
+verbessern, sind selbst gebaute Yagi-Uda-Antenne eine Überlegung wert.
+
+Der Einsatz von grossen Yagi-Uda-Antennen oder sogar Parabolantennen
+erhöht die Reichweite enorm. So konnte eine Verbindung über die Distanz
+von 8340 Metern hergestellt werden. Unter Verwendung zweier
+Parabolantennen wäre eine noch deutlich grössere Distanz vorstellbar.
+Sowohl der Einsatz von kommerziellen Yagi-Uda-Antennen als auch
+Parabolantennen ist sehr aufwendig und bedarf einiger Einarbeitung in
+das Fachgebiet. Auch unterscheidet sich hier das Einsatzgebiet deutlich
+vom \enquote{Home and Entertainment} Sektor und bedient somit seltene
+Sonder-Anforderungen.
+
+Der Student konnte zeigen, dass mit handelsüblichen WLAN-Geräten und
+etwas Draht die Reichweite von WLAN-Signalen deutlich erhöht werden
+konnte. Unter dem Einsatz von kommerziellen Richtstrahlentannen können
+Distanzen von über einem Kilometer überwunden werden.\\Mit etwas
+handwerklichem Geschick kann mit einer Satellitenschüssel und einer
+Richtstrahlentanne eine Parabolantenne gebaut werden, die
+Signalreichweiten von über 8 Kilometern zulassen.
+
+\appendix
+
+\chapter{Appendix}\label{appendixA}
+
+\section{Wavemon}\label{wavemon}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/router-yagi-reg.jpg}
+\caption{Screenshot: Wavemon selbstgebaute
+YAGI\label{fig:router-yagi-reg}}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/yagi-reg.jpg}
+\caption{Screenshot: Wavemon ABAKS YAGI-18\label{fig:yagi-reg}}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/parabol-reg.jpg}
+\caption{Screenshot: Wavemon
+Parabolantenne\label{fig:parabolantenne-reg}}
+\end{figure}
+
+\section{Glossar}\label{glossar}
+
+\textbf{TPC (Transmit Power Control)}\\TPC ist eine Funktionalität, die
+es der Sendeeinheit erlaubt, die Sendeleistung dynamisch anzupassen.
+
+\textbf{Freiraumdämpfung}\\Die Freiraumdämpfung beschreibt die
+Abschwächung von elektromagnetischen Signalen im freien Raum.
+
+\textbf{Antennengewinn}\\Der Antennengewinn beschreibt die Verstärkung
+des Signals in eine bestimmte Richtung und wird in dBi angegeben.
+
+\section{Quellenverzeichnis}\label{quellenverzeichnis}
+
+\vspace*{-2.5cm}\renewcommand{\bibname}{}\begingroup \let\clearpage\relax
+\printbibliography
+\endgroup
+
+\section{Tabellenverzeichnis}\label{tabellenverzeichnis}
+
+\renewcommand{\listtablename}{} 
+
+\begingroup \let\clearpage\relax
+\listoftables
+\endgroup
+
+\section{Abbildungsverzeichnis}\label{abbildungsverzeichnis}
+
+\renewcommand{\listfigurename}{} 
+
+\begingroup\let\clearpage\relax
+\listoffigures
+\endgroup
+
+
+\end{document}

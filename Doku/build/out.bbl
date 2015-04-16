@@ -1,0 +1,38 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{eigenbauyagi}{misc}{}
+  \field{sortinit}{D}
+  \field{howpublished}{\url{http://www.heise.de/netze/artikel/Die-0-Euro-Antenne-223704.html}}
+  \field{note}{[Online, accessed 2-April-2015]}
+  \field{title}{Die 0-Euro-Antenne}
+  \field{year}{2008}
+\endentry
+
+\entry{bakomwlan}{misc}{}
+  \field{sortinit}{W}
+  \field{howpublished}{\url{http://www.bakom.admin.ch/themen/geraete/00568/01232/index.html?lang=de}}
+  \field{note}{[Online, accessed 24-Marc-2015]}
+  \field{title}{WLAN / RLAN}
+  \field{year}{2011}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
