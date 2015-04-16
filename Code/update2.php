@@ -6,7 +6,8 @@ try
 {
 
 	$Services = array();
-
+	$date = time();
+	
 	foreach ($_Servers_ as $Service => $data) {
 		
 		$ch = curl_init();
@@ -22,7 +23,7 @@ try
 	
 
 	$DB = new DB();
-	$date = time();
+	
 
 	foreach ($Services as $Region => $serv) {
 		$q = [
@@ -34,6 +35,7 @@ try
 		foreach ($serv as $S => $s) {
 			array_push($q["Check"], array(
 				"Service" => [
+					"Date" => $date,
 					"Servicename" => $S,
 					"Performance" => $s['performance'],
 					"State" => $s['state']

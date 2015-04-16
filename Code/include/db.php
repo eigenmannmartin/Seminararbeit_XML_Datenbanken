@@ -36,13 +36,18 @@ class DB
     	$result = $this->db->xquery($query) or die ($this->db->getError()); //Execute query
 
     	$ret = array();
+    	
     	foreach ($result['XML'] as $value) {
     		$xml = simplexml_load_string( $value );
 			$json = json_encode($xml);
 			$array = json_decode($json,TRUE);
 
-			if( !isset($ret[$array['Servicename']]) || $ret[$array['Servicename']] < $array['State'] )
-				$ret[$array['Servicename']] = [ $array['State'], $array['Performance'] ];
+
+			if( !isset($ret[$array['Servicename']]) || $ret[$array['Servicename']] < $array['State'] ){
+				$ret[$array['Servicename']] = [ 'State' => $array['State'], 'Performance' => $array['Performance'] ];
+				$ret[$array['Servicename']]['Date'] = $array['Date'];
+			}
+
     	}
 
     	return $ret;
