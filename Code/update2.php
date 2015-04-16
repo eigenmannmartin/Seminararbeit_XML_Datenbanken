@@ -38,6 +38,7 @@ try
 					"Date" => $date,
 					"Servicename" => $S,
 					"Performance" => $s['performance'],
+					"Infotext" => $s['infotext'],
 					"State" => $s['state']
 				]
 			));

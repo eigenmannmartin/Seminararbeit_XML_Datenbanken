@@ -44,7 +44,7 @@ class DB
 
 
 			if( !isset($ret[$array['Servicename']]) || $ret[$array['Servicename']] < $array['State'] ){
-				$ret[$array['Servicename']] = [ 'State' => $array['State'], 'Performance' => $array['Performance'] ];
+				$ret[$array['Servicename']] = [ 'State' => $array['State'], 'Performance' => $array['Performance'], 'Infotext' => $array['Infotext'] ];
 				$ret[$array['Servicename']]['Date'] = $array['Date'];
 			}
 
