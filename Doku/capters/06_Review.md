@@ -1,9 +1,6 @@
 
 
 # Review und Bewertung
-
-
-
 <!-- Sinngemäss gilt das unter Punkt 2.4 Gesagte. Jedoch findet hier die (oft schwierige)
 Auseinandersetzung mit der eigenen Arbeit statt. Typische Fragen sind:
 - Wurde das Ziel der Arbeit gem. Einleitung und Aufgabenstellung erreicht?
@@ -11,6 +8,26 @@ Auseinandersetzung mit der eigenen Arbeit statt. Typische Fragen sind:
 (Was wäre noch zu tun, wenn man Arbeit selbst weiterführen würde?)
 - Hätte man das Ergebnis nach dem aktuellen Wissensstand, d.h. nach Abschluss der Arbeit, noch auf eine andere Art und Weise, beispielsweise effizienter oder mit anderen Methoden, erreichen können?
 -->
+
+
+<!--
+
+- Überprüfung des umgesetzten Konzepts. Erfüllt der Prototyp die Anforderung der Fragestellung?
+
+- Bewertungsergebnisse der Überprüfung des Konzepts
+- Exemplarische Beispielabfragen
+
+
+-->
+
+## Überprüfung
+Anforderungen testen (Tabelle)
+
+## Beispielabfragen
+
+### SAP funktioniert nicht richtig!!!
+
+### Gestern hat das doch auch schon nicht funktioniert.
 
 
 
