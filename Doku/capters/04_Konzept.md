@@ -63,9 +63,6 @@ Die so gesammelten Daten werden durch das Backend gespeichert und können mit Hi
 Neteye bietet eine Schnittstelle, bei welcher alle aktuell bekannten Informationen über einen beliebigen Service bezogen werden können.
 Die API liefert das Resultat in Form eines JSON-Strings zurück. Die API ist darüber hinaus Passwortgeschützt. Das Kennwort, sowie der Servicename muss also bei jeder Abfrage mitgeschickt.
 
-{Bild: Abfrage  Post: Passwort + Get: Service-Name }
-
-
 
 #### Datenbank
 Struktur & Verwendung von {DBMS}
