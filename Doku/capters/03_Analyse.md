@@ -45,16 +45,81 @@ Die Verfügbaren Reporting-Funktionalität kann als regelmässige Email-Benachri
 Zusammenfassend bietet Neteye viele Informationen, aber keine Möglichkeit diese Adressatengerecht für nicht IT-Mitarbeiter auf zu bereiten.
 
 ## Anforderungsanalyse
-Anforderungen aus der Aufgabenstellung
 
-### UC01 Statusanzeige
-für SAP, Fileserver, Netzwerk, Entwicklungsserver, Repository-Server
 
-### UC02 Fehleranzeige
-Details zu den Fehlern
 
-### UC03 vergangene Fehlerfälle (48h)
+### A-01 Statusanzeige
+|:--|:--|
+|__Ziel__|Der Status der Systeme wird korrekt und nachvollziehbar angezeigt. |
+|__Beschreibung__|Jeder Mitarbeiter kann den aktuellen Systemzustand der Systeme einsehen. |
+|__Auslösendes Ereignis__|Ein Mitarbeiter möchte den Systemstatus sehen. |
+|__Akteure__|Mitarbeiter|
+|__Vorbedingung__|Der Mitarbeiter ist am Firmennetzwerk angemeldet. |
+|__Ergebnis__|Der Mitarbeiter kann den Systemstatus einsehen. |
+|__Hauptszenario__|Der Mitarbeiter erkennt ob alle Systeme ordnungsgemäss funktionieren. |
+|__Alternativszenario__|Der Mitarbeiter kann Rückschlüsse ziehen, warum gewisse Systeme für ihn nicht erreichbar sind.|
+|__Qualitäten__|-|
 
-### NFR01 Verwendung von XML DBMS
 
-### Web-basiert
+### A-02 Fehleranzeige
+|:--|:--|
+|__Ziel__|Tritt eine Fehlfunktion auf, wird der Grund dafür angezeigt. |
+|__Beschreibung__|Jeder Mitarbeiter kann den Grund einer Fehlfunktion einsehen. |
+|__Auslösendes Ereignis__|Ein Mitarbeiter möchte den Grund der aktuellen Fehlfunktion einsehen. |
+|__Akteure__|Mitarbeiter|
+|__Vorbedingung__|Der Mitarbeiter ist am Firmennetzwerk angemeldet. |
+|__Ergebnis__|Der Mitarbeiter kann den Grund der Fehlfunktion einsehen. |
+|__Hauptszenario__|Der Mitarbeiter erkennt warum ein System nicht ordnungsgemäss funktioniert. |
+|__Alternativszenario__|-|
+|__Qualitäten__|Anhand des angezeigten Grunds der Fehlfunktion kann der Mitarbeiter erkennen und verstehen warum die Fehlfunktion aufgetreten ist. |
+
+### A-03 vergangene Fehlerfälle (48h)
+|:--|:--|
+|__Ziel__|Fehlfunktionen der vergangenen 48h der Systemen werden angezeigt. |
+|__Beschreibung__|Jeder Mitarbeiter kann Fehlfunktionen der vergangenen 48h einsehen. |
+|__Auslösendes Ereignis__|Ein Mitarbeiter möchte vergangene Fehlfunktionen der Systeme sehen. |
+|__Akteure__|Mitarbeiter|
+|__Vorbedingung__|Der Mitarbeiter ist am Firmennetzwerk angemeldet. |
+|__Ergebnis__|Der Mitarbeiter kann vergangene Fehlfunktionen einsehen. |
+|__Hauptszenario__|Der Mitarbeiter erkennt ob alle Systeme ordnungsgemäss funktioniert haben. |
+|__Alternativszenario__|Der Mitarbeiter kann Rückschlüsse ziehen, warum gewisse Systeme für ihn nicht erreichbar waren.|
+|__Qualitäten__|-|
+
+### A-04 Verwendung eines XML DBMS
+|:--|:--|
+|__Ziel__|Ein natives XML DBMS muss verwendet werden. |
+|__Beschreibung__|Das Datenhaltungsproblem wird mittels eines XML DBMS gelöst. |
+|__Auslösendes Ereignis__|-|
+|__Akteure__|-|
+|__Vorbedingung__|-|
+|__Ergebnis__|Alle Daten werden in einem XML DBMS gehalten. |
+|__Hauptszenario__|-|
+|__Alternativszenario__|-|
+|__Qualitäten__|-|
+
+### A-05 Web-basiert
+|:--|:--|
+|__Ziel__|Das GUI ist web-basiert. |
+|__Beschreibung__|Die Anzeige der Daten passiert Web-basiert. |
+|__Auslösendes Ereignis__|-|
+|__Akteure__|-|
+|__Vorbedingung__|-|
+|__Ergebnis__|Die Daten können in einem Web-Gui eingesehen werden. |
+|__Hauptszenario__|-|
+|__Alternativszenario__|-|
+|__Qualitäten__|-|
+
+### A-06 Services 
+|:--|:--|
+|__Ziel__|Die wichtigsten Services sind eingebunden.  |
+|__Beschreibung__|Die Services SAP, Fileserver, Netzwerk, Entwicklungsserver und Repository-Server sind eingebunden. |
+|__Auslösendes Ereignis__|-|
+|__Akteure__|-|
+|__Vorbedingung__|-|
+|__Ergebnis__|Die Daten können in einem Web-Gui eingesehen werden. |
+|__Hauptszenario__|-|
+|__Alternativszenario__|-|
+|__Qualitäten__|-|
+
+
+

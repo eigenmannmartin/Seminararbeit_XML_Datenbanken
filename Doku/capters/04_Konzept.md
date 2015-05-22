@@ -26,29 +26,27 @@ d.h.
 - Datenflussdiagramm
 
 -->
+In diesem Kapitel wird das System entworfen, welches den Anforderungen aus der Anforderungsanalyse entspricht.
 
+## Design Ansätze
+Zur Lösung der Aufgabenstellung sind nachfolgend drei möglich Design-Ansätze aufgezeigt.
 
-## Anforderungen
+### Integrated Application
+Die Applikation wird als Plug-In beim Neteye integriert und stellt seine Funktionalitäten als teil des bestehenden Web-Frontend zur Verfügung. Die zu entwickelnde Software kann direkt auf die Datenbank zugreifen und es entfällt die Entwicklung der Schnittstelle.
 
-### UC01 Statusanzeige
-für SAP, Fileserver, Netzwerk, Entwicklungsserver, Repository-Server
+### Single Tier Application
+Die Applikation ist selbständig, verfügt über ein eigenes Web-Gui und greift über die API auf Neteye zu. Die Daten werden periodisch aktualisiert lokal in einer Datenbank gespeichert. 
 
-### UC02 Fehleranzeige
-Details zu den Fehlern
-
-### UC03 vergangene Fehlerfälle (48h)
-
-### NFR01 Verwendung von XML DBMS
-
-### Web-basiert
+## Entscheid
+Alle gestellten Anforderungen werden von beiden Desing-Ansätzen erfüllt.
+Da die Single Tier Application auf einem eigenen Server läuft und nur die API zum Neteye beachtet werden muss, ist dies die sauberer Lösung. Weiter muss so keine Anpassung am Neteye vorgenommen werden.
 
 
 ## Design der Software
-Backend - Frontend
+Der Prototyp besteht aus den beiden Bausteinen Backend und Frontend.
 
-{Bild: Architektur Schemata}
+{Bild: Architektur Schemata (inkl. Umgebung)}
 
-Klarstellen dass Frontend auf dem Server ausgeführt wird.
 
 ### Backend
 Die Daten auf dem Fremdsystem Neteye müssen zur Aufbereitung über die Schnittstelle in die Backend-Datenbank transferiert werden. Dazu wird eine bestehende Schnittstelle des Fremdsystems verwendet.
@@ -56,13 +54,18 @@ Die Daten auf dem Fremdsystem Neteye müssen zur Aufbereitung über die Schnitts
 Nachstehend sind der Aufbau des Backend sowie der Schnittstelle ins Fremdsystem erläutert.
 
 #### Datenfluss
+Für jeden anzuzeigenden Service wird eine Schnittstellenabfrage durchgeführt um den aktuellen Status des entsprechenden Services zu bekommen.
+Die so gesammelten Daten werden durch das Backend gespeichert und können mit Hilfe des Frontends wieder angezeigt werden.
+
 {Bild: Neteye -> Backend Logic -> DB -> Frontend}
 
 #### Neteye Schnittstelle
-JSON Abfragen
-Passwort geschützt
+Neteye bietet eine Schnittstelle, bei welcher alle aktuell bekannten Informationen über einen beliebigen Service bezogen werden können.
+Die API liefert das Resultat in Form eines JSON-Strings zurück. Die API ist darüber hinaus Passwortgeschützt. Das Kennwort, sowie der Servicename muss also bei jeder Abfrage mitgeschickt.
 
-Cron-Job
+{Bild: Abfrage  Post: Passwort + Get: Service-Name }
+
+
 
 #### Datenbank
 Struktur & Verwendung von {DBMS}
