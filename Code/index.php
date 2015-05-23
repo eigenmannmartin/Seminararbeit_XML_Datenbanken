@@ -39,7 +39,7 @@ $paststatetable .= "</table>"
 
 ?>
 
-<?php  include("head.php");?>
+<?php  include("include/head.php");?>
 
 <div class="container">
 <?php echo($statetable);?>
@@ -47,4 +47,4 @@ $paststatetable .= "</table>"
 <?php echo($paststatetable);?>
 </div>
 
-<?php  include("tail.php");?>
+<?php  include("include/tail.php");?>

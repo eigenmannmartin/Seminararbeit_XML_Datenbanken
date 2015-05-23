@@ -1,12 +1,13 @@
 <?php
-include ('include/settings.php');
-include ('include/eXist.php');
+include ('include/db.php');
+
 
 try
 {
 
 	$Services = array();
-
+	$date = time();
+	
 	foreach ($_Servers_ as $Service => $data) {
 		
 		$ch = curl_init();
@@ -21,36 +22,33 @@ try
 	}
 	
 
-	//var_dump( $Services );
-
-	$db = new eXist("admin", "admin");
-	$db->connect() or die ($db->getError());
-
-	$date = time();
+	$DB = new DB();
+	
 
 	foreach ($Services as $Region => $serv) {
-		$query = 'update insert <Check><Date>'.$date.'</Date>';
+		$q = [
+			"Check" => [
+				"Date" => $date,
+			]
+		];
 
 		foreach ($serv as $S => $s) {
-			
-			$query .= "<Service> 
-							<Servicename>".$S."</Servicename>
-							<Performance>".$s['performance']."</Performance>
-							<State>".$s['state']."</State>
-					   </Service>";
-				
+			array_push($q["Check"], array(
+				"Service" => [
+					"Date" => $date,
+					"Servicename" => $S,
+					"Performance" => $s['performance'],
+					"Infotext" => $s['infotext'],
+					"State" => $s['state']
+				]
+			));
 		}
-
-		$query .= '</Check> into doc("'._DB_.'")//areas/area[areaname="'.$Region.'"]';
 	}
+
 	
-	//echo( "<code>".htmlentities($query)."</code>" );
+	$DB->insert($q, $Region);
+	$DB->close();
 
-	$db->setDebug(TRUE);
-	$db->setHighlight(TRUE);
-	$db->xquery($query) or die ($db->getError()); //Execute query
-
-	$db->disconnect() or die ($db->getError());
 }
 catch( Exception $e )
 {

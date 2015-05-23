@@ -70,9 +70,40 @@ Table: Post-Parameters
 
 
 ### Modulare Implementation
-DB-Layer, Logic-Layer, Presentation-Layer
+Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. 
 
-### Abfragen Frontend
+#### DB-Layer
+Der DB-Layer verfügt über insgesamt drei öffentliche Funktionen (public functions).
+
+-------------------------------------------------------------
+Funktionsname       Beschreibung
+------------------- -----------------------------------------
+__readstate__       Die Funktion gibt ein Array mit allen aktuellen
+                    Systemstati zurück.
+                    _Parameter: Region_
+
+__readpaststate__   Die Funktion gibt ein Array mit den aktuellsten 
+                    Fehlerfällen pro Service der vergangenen 48 Stunden zurück.
+                    _Parameter: Region_
+
+__insert__          Die Funktion fügt einen neuen Systemstati der 
+                    Datensammlung hinzu.
+-------------------------------------------------------------
+
+
+Die Abfragen auf die Tabelle werden mit einem einfachen Xquery-select durchgeführt.
+
+>(for $checks in doc("_TabellenName_")//areas/area[areaname="_Region_"]//Check
+> order by $checks/Date descending
+> return $checks)[1]'
+
+
+#### Logic-Layer
+Bei der Ausführung der update.php wird für jeden hinterlegten Service der aktuelle Stati beim Neteye erfragt und der Datensammlung hinzugefügt.
+
+#### Konfigurations-Layer
+Die gesamte Konfiguration ist in der Datei _include/settings_ hinterlegt.
+Im Konfigurations-Layer werden die abzufragenden Services hinterlegt.
 
 
 ## Grafische Umsetzung

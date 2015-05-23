@@ -24,8 +24,10 @@ Auseinandersetzung mit der eigenen Arbeit statt. Typische Fragen sind:
 Anforderungen testen (Tabelle)
 
 ## Beispielabfragen
+Es soll überprüft werden, welchen Mehrwert durch den Prototyp erzielt werden konnte. Es werden zwei fragen gestellt, die ohne den Prototypen durch den Mitarbeiter nicht beantwortet werden können.
 
 ### SAP funktioniert nicht richtig!!!
+
 
 ### Gestern hat das doch auch schon nicht funktioniert.
 
