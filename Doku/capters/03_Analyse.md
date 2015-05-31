@@ -24,14 +24,14 @@ Kritische Auseinandersetzung mit dem vorliegenden Material. Gibt es Hinweise auf
 
 
 ## Technische Grundlagen
-Neteye ist ein WürhtPhoenix vertriebenes, auf Open Source basiertes IT-Management System. Neben Asset, Inventory-, Capacity- und Service Management nach ITIL Standards sind auch ausgeprägte Überwachungsfunktionalitäten vorhanden.
+Neteye ist ein von WürhtPhoenix vertriebenes, auf OpenSource basiertes IT-Management System. Neben Asset, Inventory-, Capacity- und Service Management nach ITIL Standards sind auch ausgeprägte Überwachungsfunktionalitäten vorhanden.
 
 <!-- Aufbau Neteye -->
 
 Zur Überwachung von Systemen und Services werden die Tool-Kits Nagios und Alexa verwendet. Während Nagios den Zustand von Systemen über das Auslesen von Logs und Statusabfragen an die Systeme selbst aufzeichnet, führt Alexa sogenannte Real-User Experience Tests durch. Dabei wird der zu testende Service so getestet, als ob ein Benutzer ihn verwendet. (Senden eines Emails)
 
 Die aggregierten Zustandsdaten eines Services können in einem Business-Processes zusammengefasst werden. Dabei wird nicht nur der Zustand des zu überwachenden Services mit eingezogen, sondern auch die Abhängigkeiten, wie zum Beispiel Netzwerk, Firewall-Auslastung oder Temperatur im Datacenter.
-Ein Business-Process repräsentiert also die Funktionsfähigkeit eines Services. (z.B. SAP, Email, ...)
+Ein Business-Process repräsentiert also die Funktionsfähigkeit eines Services. (z.B. SAP oder Email)
 
 ## Problemanalyse
 
@@ -40,12 +40,12 @@ Die Abbildung {@fig:nagios1} zeigt links alle Business-Processes und Rechts eine
 
 ![Neteye Status Übersicht](img/nagios1.png) {#fig:nagios1}
 
-Die Verfügbaren Reporting-Funktionalität kann als regelmässige Email-Benachrichtigungen konfiguriert werden. Das Detaillevel der Reports ist jedoch nicht beeinflussbar und überfordernd für fachfremde Leser. Auch kann der Sendezeitpunkt nicht abhängig vom Zustand des Systems gemacht werden.
+Die verfügbare Reporting-Funktionalität kann als regelmässige Email-Benachrichtigungen konfiguriert werden. Das Detaillevel der Reports ist jedoch nicht beeinflussbar und überfordernd für fachfremde Leser. Auch kann der Sendezeitpunkt nicht abhängig vom Zustand des Systems gemacht werden.
 
 Zusammenfassend bietet Neteye viele Informationen, aber keine Möglichkeit diese Adressatengerecht für nicht IT-Mitarbeiter auf zu bereiten.
 
 ## Anforderungsanalyse
-
+Die Anforderungsanalyse sucht alle Anforderungen an den Prototyp die entweder durch Neteye bedingt oder durch die Aufgabenstellung vorgegeben sind.
 
 
 ### A-01 Statusanzeige
@@ -225,6 +225,23 @@ __Qualitäten__              -
 -------------------------------------------------------------------------------
 Table: A-06
 
+
+
+
+## Bewertung der Anforderungen
+Die gefundenen Anforderungen werden den Deliveries der Aufgabenstellung zugeordnet um so die Anforderungen zu validieren.
+
+-------------------------------------------------------------------------------
+__A__   __Titel__                           __Aufgabenstellung__
+------- ----------------------------------- -----------------------------------
+A-01    Statusanzeigen                      Ziel der Arbeit
+A-02    Fehleranzeige                       Ziel der Arbeit
+A-03    vergangene Fehlerfälle              Ziel der Arbeit
+A-04    Verwendung eines XML DBMS           R3
+A-05    Web-basiert                         R3
+A-06    Services                            R2
+-------------------------------------------------------------------------------
+Table: Zuordnung der Anforderung zu Elementen der Aufgabenstellung
 
 
 

@@ -7,7 +7,7 @@ Die Seminararbeit muss im Zeitraum von 11.03.2015 bis 09.06.2015 durchgeführt w
 
 ## Zeitlicher Rahmen
 
-Der offizielle Projektstart erfolgt mit dem Kick-Off am 11.03.2015. Am 16. 06.2015 finden die Präsentationen statt. 
+Der offizielle Projektstart erfolgt mit dem Kick-Off am 11.03.2015. Am 16.06.2015 finden die Präsentationen statt. 
 
 Der Aufwand für die Bearbeitung der Seminararbeit soll mindestens 50 Stunden umfassen. 
 

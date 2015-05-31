@@ -23,7 +23,7 @@ __PHP__             PHP ist eine der am weitesten verbreitetsten
                      Programmiersprachen im Bereich der Web-Entwicklung. Aufgrund der hervorragenden Kompatibilität mit bestehenden Systemen wird PHP verwendet.
 
 __eXist__           eXist ist ein sehr bekanntes und Einstiegs freundliches 
-                     XML DBMS. Darüber hinaus ist es wegen seiner freien Verfügbarkeit für dieses Projekt bestens geeignet.
+                     XML DBMS. Darüber hinaus ist es wegen seiner freien Verfügbarkeit für dieses Projekt bestens geeignet.([@eXistPHP], [@eXistDB]) 
 
 __BootStrap__       Bootstrap ist das bekannteste CSS Framework der letzten
                      Jahre. Eine sehr grosse Community, viele Plugins und grosse Flexibilität erlauben es schnell optisch ansprechende UIs zu erstellen.
@@ -70,7 +70,7 @@ Table: Post-Parameters
 
 
 ### Modulare Implementation
-Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. 
+Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. Dadurch wir eine Separation der Zuständigkeit erreicht und die Warbarkeit wird deutlich erhöht.
 
 #### DB-Layer
 Der DB-Layer verfügt über insgesamt drei öffentliche Funktionen (public functions).
@@ -91,7 +91,7 @@ __insert__          Die Funktion fügt einen neuen Systemstati der
 -------------------------------------------------------------
 
 
-Die Abfragen auf die Tabelle werden mit einem einfachen Xquery-select durchgeführt.
+Die Abfragen auf die Tabelle werden mit einem einfachen Xquery-select durchgeführt. [@xQuery]
 
 >(for $checks in doc("_TabellenName_")//areas/area[areaname="_Region_"]//Check
 > order by $checks/Date descending

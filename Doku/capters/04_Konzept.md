@@ -29,7 +29,7 @@ d.h.
 In diesem Kapitel wird das System entworfen, welches den Anforderungen aus der Anforderungsanalyse entspricht.
 
 ## Design Ansätze
-Zur Lösung der Aufgabenstellung sind nachfolgend drei möglich Design-Ansätze aufgezeigt.
+Zur Lösung der Aufgabenstellung sind nachfolgend zwei möglich Design-Ansätze aufgezeigt. Diese werden kurz beleuchtet und der am besten passenden ausgewählt.
 
 ### Integrated Application
 Die Applikation wird als Plug-In beim Neteye integriert und stellt seine Funktionalitäten als teil des bestehenden Web-Frontend zur Verfügung. Die zu entwickelnde Software kann direkt auf die Datenbank zugreifen und es entfällt die Entwicklung der Schnittstelle.
@@ -39,13 +39,14 @@ Die Applikation ist selbständig, verfügt über ein eigenes Web-Gui und greift 
 
 ## Entscheid
 Alle gestellten Anforderungen werden von beiden Desing-Ansätzen erfüllt.
-Da die Single Tier Application auf einem eigenen Server läuft und nur die API zum Neteye beachtet werden muss, ist dies die sauberer Lösung. Weiter muss so keine Anpassung am Neteye vorgenommen werden.
+Da die Single Tier Application auf einem eigenen Server läuft und nur die API zum Neteye beachtet werden muss, ist dies die sauberere Lösung. Weiter muss so keine Anpassung am Neteye vorgenommen werden.
 
 
 ## Design der Software
-Der Prototyp besteht aus den beiden Bausteinen Backend und Frontend.
+Der Prototyp besteht aus den beiden Bausteinen Backend, XML DBMS und Frontend.
+Nur die Backend-Komponente greift auf Neteye zu. 
 
-{Bild: Architektur Schemata (inkl. Umgebung)}
+![Komponenten](img/components.jpg)
 
 
 ### Backend
@@ -57,7 +58,7 @@ Nachstehend sind der Aufbau des Backend sowie der Schnittstelle ins Fremdsystem 
 Für jeden anzuzeigenden Service wird eine Schnittstellenabfrage durchgeführt um den aktuellen Status des entsprechenden Services zu bekommen.
 Die so gesammelten Daten werden durch das Backend gespeichert und können mit Hilfe des Frontends wieder angezeigt werden.
 
-{Bild: Neteye -> Backend Logic -> DB -> Frontend}
+![Datenflussdiagramm](img/dataflow.jpg)
 
 #### Neteye Schnittstelle
 Neteye bietet eine Schnittstelle, bei welcher alle aktuell bekannten Informationen über einen beliebigen Service bezogen werden können.
@@ -65,11 +66,51 @@ Die API liefert das Resultat in Form eines JSON-Strings zurück. Die API ist dar
 
 
 #### Datenbank
-Struktur & Verwendung von {DBMS}
-Datenban Schemata
+Die Servicestati werden in der Datenbank nach Area und danach nach Check aufgeteilt. Area gibt das gebiet an woher die Testresultate kommen (z.B. zh).
+Der Check selbst beinhaltet alle Stati der abgefragten Services.
+
+``` {.xml}
+<areas>
+    <area>
+        <areaname></areaname>
+        <Check>
+            <Date></Date>
+            <Service>
+                <Servicename></Servicename>
+                <Performance></Performance>
+                <Infotext></Infotext>
+                <State></State>
+            </Service>
+        </Check>
+    </area>
+</areas>
+
+``` 
+<!-- 
+```
+ -->
 
 
 ### Frontend
-Das Frontend...
-HTML - Template etc.
+Das Frontend zeigt die in der Datenbank abgelegten Daten statisch an.
+Die Datenbankabfragen gehören ins Frontend uns sind aufgrund der Datenbankstruktur vorgegeben.
 
+Um den aktuellsten Status zu erhalten wird die folgende Query verwendet.
+
+``` {.xml}
+doc("DB")//areas/area[areaname="Region"]//Check
+    order by $checks/Date descending
+``` 
+<!-- 
+```
+ -->
+
+Um die vergangenen Fehlerfälle aus zu lesen, wird das resultat zusätzlich auf den Service/State>0 geprüft sowie das Check-Datum limitiert.
+
+``` {.xml}
+("DB")//areas/area[areaname="Region"]//Check[Date>""]//Service[State>0]
+    order by $checks/Date descending
+``` 
+<!-- 
+```
+ -->

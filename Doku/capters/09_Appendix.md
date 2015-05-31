@@ -1,10 +1,7 @@
 \appendix
 
 
-# Appendix {#appendixA}
-
-
-## Glossar
+# Anhang {#appendixA}
 
 
 ## Quellenverzeichnis

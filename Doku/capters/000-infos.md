@@ -12,7 +12,9 @@ date: 1.3.2015
 
 # Abstract
 
-asdf
+Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet ein spezifisches Datenhaltungsprolem mittels eines nativen XML-Datenbanksystem.
+Als Projektziel wird eine Systemstatusdatenbank für den IT-Support erstellt, die den aktuellen Zustand, sowie vergangene Fehler übersichtlich darstellt.
+
 
 
 
