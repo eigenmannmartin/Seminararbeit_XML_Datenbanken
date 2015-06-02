@@ -14,8 +14,8 @@ Die Applikation wird als Plug-In beim Neteye integriert und stellt seine Funktio
 Die Applikation ist selbständig, verfügt über ein eigenes Web-Gui und greift über die API auf Neteye zu. Die Daten werden periodisch aktualisiert und lokal in einer XML-Datenbank gespeichert. 
 
 ## Entscheid
-Alle gestellten Anforderungen werden von beiden Desing-Ansätzen erfüllt.
-Da die Single Tier Application auf einem eigenen Server läuft und nur die API zum Neteye beachtet werden muss, ist dies die sauberere Lösung. Weiter muss so keine Anpassung am Neteye vorgenommen werden.
+Die gesetzen Ziele dieser Arbeit sind mit beiden Desing-Ansätzen erreichbar.
+Da die Single Tier Application auf einem eigenen Server läuft und nur die API zum Neteye beachtet werden muss, ist dies die sauberere Lösung. Weiter muss so keine Veränderung am Neteye vorgenommen werden.
 
 
 ## Design der Software
@@ -31,10 +31,10 @@ Die Daten auf dem Fremdsystem Neteye müssen zur Aufbereitung über die Schnitts
 Nachstehend sind der Aufbau des Backend sowie der Schnittstelle ins Fremdsystem erläutert.
 
 #### Datenfluss
-Für jeden anzuzeigenden Service wird eine Schnittstellenabfrage durchgeführt um den aktuellen Status des entsprechenden Services zu bekommen.
+Für jeden anzuzeigenden Service wird eine Schnittstellenabfrage durchgeführt, um den aktuellen Status des entsprechenden Services zu bekommen, welcher in Neteye gespeichert ist. Dieser Vorgang ist im Datenflussdiagramm (Abbildung {@fig:dataflow}) dargestellt.
 Die so gesammelten Daten werden durch das Backend gespeichert und können mit Hilfe des Frontends wieder angezeigt werden.
 
-![Datenflussdiagramm](img/dataflow.jpg)
+![Datenflussdiagramm](img/dataflow.jpg) {#fig:dataflow}
 
 #### Neteye Schnittstelle
 Neteye bietet eine Schnittstelle, bei welcher alle aktuell bekannten Informationen über einen beliebigen Service bezogen werden können.
@@ -93,4 +93,4 @@ Um die vergangenen Fehlerfälle aus zu lesen, wird das Resultat zusätzlich auf 
 
 
 ## Abschluss Konzept
-Das konkretisierte Konzept eines Prototypen, welcher Statusinformationen der IT-Infrastruktur vom Neteye ausliest und in einem nativen XML-Datenbankmanagement System abspeichert, konnte in sofern erstellt werden, dass darauf aufbauen im nächsten Kapitel [Implementation] der Prototyp umgesetzt werden kann.
+Das konkretisierte Konzept eines Prototypen, welcher Statusinformationen der IT-Infrastruktur vom Neteye ausliest und in einem nativen XML-Datenbankmanagement System abspeichert, konnte in sofern erstellt werden, als dass darauf aufbauen im nächsten Kapitel [Implementation] der Prototyp umgesetzt werden kann.

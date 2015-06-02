@@ -12,7 +12,7 @@ Zur Überwachung von Systemen und Services werden die Tool-Kits Nagios und Alexa
 Die aggregierten Zustandsdaten eines Services können in einem Business-Processes zusammengefasst werden. Dabei wird nicht nur der Zustand des zu überwachenden Services mit eingezogen, sondern auch die Abhängigkeiten, wie zum Beispiel Netzwerk, Firewall-Auslastung oder Temperatur im Datacenter.
 Ein Business-Process repräsentiert also die Funktionsfähigkeit eines Services. (z.B. SAP oder Email)
 
-Der Detaillierungsgrad der angezeigten Informationen kann nicht variiert werden. Es ist auch nicht möglich Informationen aus zu blenden oder Anzeige-Berechtigungen zu definieren. Beim Zugriff auf das von Neteye zur Verfügung gestellte WEB-GUI sind entweder alle Status-Informationen, oder Keine einsehbar.
+Der Detaillierungsgrad der im Neteye angezeigten Informationen kann nicht variiert werden. Es ist auch nicht möglich Informationen aus zu blenden oder Anzeige-Berechtigungen zu definieren. Beim Zugriff auf das von Neteye zur Verfügung gestellte WEB-GUI sind entweder alle, oder keine Status-Informationen einsehbar.
 
 ## Problemanalyse
 Neteye wurde designet um die Arbeit in einer IT-Abteilung zu erleichtern. So sind sehr viele und sehr detaillierte Informationen im GUI einsehbar. Die verwendete tabellarische Ansicht macht das Arbeiten und Navigieren für Fachpersonal sehr einfach, für themenfremd Personen jedoch nahezu unmöglich.

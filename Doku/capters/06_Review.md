@@ -21,7 +21,7 @@ Auseinandersetzung mit der eigenen Arbeit statt. Typische Fragen sind:
 -->
 
 ## Überprüfung
-Die Überpüfung, ob duch den Prororypen ein Mehrwert erzielt wurde, soll anhand der beiden nachstehenden Fragen überprüft werden.
+Die Überprüfung, ob durch den Prototypen ein Mehrwert erzielt wurde, soll anhand der beiden nachstehenden Fragen überprüft werden.
 
 __SAP funktioniert nicht richtig!!!__
 Ohne die in dieser Arbeit geschaffene Statusübersicht, musste der Mitarbeiter der IT-Abteilung anrufen und nachfragen, ob das Problem bereits festgestellt wurde. Nun kann er aber selbst erkennen, dass das Problem bereits vom System detektiert wurde und muss nur noch in dringenden Fällen die IT kontaktieren. 

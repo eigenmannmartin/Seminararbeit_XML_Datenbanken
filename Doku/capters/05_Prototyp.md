@@ -26,7 +26,7 @@ __Apache__          Apache ist neben Nginx der am meisten verwendete Webserver
 Table: Technologie Stack
 
 ## Entwicklung
-In diesem Abschnitt sind die Knackpunkte der Umsetztung aufgeführt. Neben der Schnittstelle zum Neteye sind auch die einzelnen Layer des Backends beschreiben.
+In diesem Abschnitt sind die Knackpunkte der Umsetzung aufgeführt. Neben der Schnittstelle zum Neteye sind auch die einzelnen Layer des Backends beschreiben.
 
 ### Connect to Neteye
 Die von Neteye zur Verfügung gestellte API ermöglicht die Abfrage des gesamten Status jedes Services. Im Folgenden sind sowohl Abfrageparameter als auch Rückgabeparameter beschrieben. Die hinterlegte Benutzerkennung wurde eigens für diese Abfragen angelegt.

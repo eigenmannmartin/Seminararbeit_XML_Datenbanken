@@ -1,7 +1,6 @@
 ---
 title:  Lösen eines begrenzten Datenhaltungsproblems mit einem nativen XML-Datenbanksystem am Beispiel einer Systemstatusdatenbank im IT-Support 
 author: Martin Eigenmann
-date: 1.3.2015
 ...
 
 <!-- Todo:
@@ -11,8 +10,8 @@ date: 1.3.2015
 
 
 # Abstract
-Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet das lösen eins spezifisches Datenhaltungsprolems mittels eines nativen XML-Datenbanksystems.
-Als Projektziel wird eine WEB-GUI für den IT-Support erstellt, die den aktuellen Systemzustand der IT-Infrastruktur, sowie vergangene Fehler, übersichtlich darstellt.
+Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet das lösen eins spezifisches Datenhaltungsprolems, mittels eines nativen XML-Datenbanksystems.
+Gezeigt wird, dass unter Verwendung eines nativen XML-DMBS, ein WEB-GUI  erstellt werden kann, welches den aktuellen Systemzustand der IT-Infrastruktur, sowie vergangene Fehler, übersichtlich darstellt.
 
 
 
