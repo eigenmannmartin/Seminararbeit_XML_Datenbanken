@@ -1,7 +1,7 @@
 
 
 # Implementation
-In diesem werden die wichtigsten Eckpunkte der Umsetzung des Prototypen beleuchtet. Dabei wird neben der verwendeten Technologie auch auf Knackpunkte bei der Umsetzung eingegangen.
+In diesem Kapitel werden die wichtigsten Eckpunkte der Umsetzung des Prototypen beleuchtet. Dabei wird neben der verwendeten Technologie auch auf Knackpunkte bei der Umsetzung eingegangen.
 
 ## Technologie Stack
 Um den Prototyp zu implementieren, wird auf Software und Framewoks von Dritten zurückgegriffen. In den folgenden Kapiteln werden die Funktion und der Auswahlgrund der Fremdsoftware erläutert.

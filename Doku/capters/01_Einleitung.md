@@ -10,7 +10,7 @@ Ziel der Arbeit ist es den Zustand der IT-Systeme auf einer Webseite zu publizie
 
 ## Ausgangslage
 
-Im Unternehmen existiert ein Überwachungssystem (Neteye) welches das Verhalten von der IT-Infrastruktur misst. Auf Grund dieser regelmässigen Vermessung kann der Zustand Services abgeleitet werden und Fehlfunktionen erkannt werden.
+Im Unternehmen existiert ein Überwachungssystem (Neteye) welches das Verhalten von der IT-Infrastruktur misst. Auf Grund dieser regelmässigen Vermessung kann der Zustand der IT-Services abgeleitet und Fehlfunktionen erkannt werden.
 Der aktuelle Zustand aller Services wird im Interface von Neteye dargestellt. Diese Darstellung ist jedoch sehr unübersichtlich und nur für geschultes Personal geeignet.
 Darüber hinaus ist eine zusammenfassende Auflistung der vergangenen Fehlfunktionen nicht möglich.
 
@@ -19,7 +19,7 @@ Darüber hinaus ist eine zusammenfassende Auflistung der vergangenen Fehlfunktio
 
 Ziel der Arbeit ist es, für alle Mitarbeiter Informationen über den aktuellen Zustand der IT-Infrastruktur zugänglich zu machen.
 
-Im Verlaufe der Arbeit soll gezeigt werden, dass unter Verwendung eines XML-DBMS die Zustände der IT-Infrastruktur abgespeichert und verwaltet werden könne, so dass ein WEB-GUI implementiert werden kann, welche sowohl die Zustände der wichtigsten Services sowie aufgetretene Fehlfunktionen anzeigt.
+Im Verlaufe der Arbeit soll gezeigt werden, dass unter Verwendung eines XML-DBMS die Zustände der IT-Infrastruktur abgespeichert und verwaltet werden können, so dass ein WEB-GUI implementiert werden kann, welche sowohl die Zustände der wichtigsten Services sowie aufgetretene Fehlfunktionen anzeigt.
 
 Neben der Erarbeitung der technischen Grundlagen muss auch eine kurzen Analyse der bereits vorhandenen Möglichkeiten der Mitarbeiter, Informationen über den aktuellen Zustand der IT-Infrastruktur zu erlangen, durchgeführt werden.
 

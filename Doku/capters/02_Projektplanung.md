@@ -2,7 +2,7 @@
 
 # Projektplanung
 
-Das Kapitel Projektplanung f체hrt alle relevanten Infomrationen zur durchf체hrungsdauer als auch zum Organisatorischen Rahmen auf.
+Das Kapitel Projektplanung f체hrt alle relevanten Infomrationen zur Durchf체hrungsdauer als auch zum Organisatorischen Rahmen auf.
 
 ## Projektplan
 Die Seminararbeit muss im Zeitraum von 11.03.2015 bis 09.06.2015 durchgef체hrt werden. Die Arbeit wurde in den Kalenderwochen 21 bis 23 durchgef체hrt.
@@ -17,7 +17,7 @@ In der nachstehenden Tabelle sind alle massgeblich involvierten Personen aufgef�
 ------------------------------------------------------------------------------
 Personen                        Kontakt
 ------------------------------- ----------------------------------------------
-**Dr. Reto Knaack**             ZHAW Standort Z체rich
+**Reto Knaack**                 ZHAW Standort Z체rich
 (Studeingangs Leiter)           Lagerstrasse 41 / 8004 Z체rich
                                 Reto.Knaack@zhaw.ch
 

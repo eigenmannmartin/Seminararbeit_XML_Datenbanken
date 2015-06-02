@@ -1,5 +1,5 @@
 ---
-title:  Lösen eines begrenzten Datenhaltungsproblems mit einem native XML-Datenbanksystem am Beispiel einer Systemstatusdatenbank im IT-Support 
+title:  Lösen eines begrenzten Datenhaltungsproblems mit einem nativen XML-Datenbanksystem am Beispiel einer Systemstatusdatenbank im IT-Support 
 author: Martin Eigenmann
 date: 1.3.2015
 ...
@@ -11,9 +11,8 @@ date: 1.3.2015
 
 
 # Abstract
-
-Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet ein spezifisches Datenhaltungsprolem mittels eines nativen XML-Datenbanksystem.
-Als Projektziel wird eine Systemstatusdatenbank für den IT-Support erstellt, die den aktuellen Zustand, sowie vergangene Fehler übersichtlich darstellt.
+Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet das lösen eins spezifisches Datenhaltungsprolems mittels eines nativen XML-Datenbanksystems.
+Als Projektziel wird eine WEB-GUI für den IT-Support erstellt, die den aktuellen Systemzustand der IT-Infrastruktur, sowie vergangene Fehler, übersichtlich darstellt.
 
 
 

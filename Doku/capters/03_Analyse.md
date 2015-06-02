@@ -7,7 +7,7 @@ In diesem Kapitel wird erläutert, welche Funktionalität durch Neteye zur Verf�
 ## Grundlagen
 Neteye ist ein von WürhtPhoenix vertriebenes, auf OpenSource basiertes IT-Management System. Neben Asset, Inventory-, Capacity- und Service Management nach ITIL Standards sind auch ausgeprägte Überwachungsfunktionalitäten vorhanden.
 
-Zur Überwachung von Systemen und Services werden die Tool-Kits Nagios und Alexa verwendet. Während Nagios den Zustand von Systemen über das Auslesen von Logs und Statusabfragen an die Systeme selbst aufzeichnet, führt Alexa sogenannte Real-User Experience Tests durch. Dabei wird der zu testende Service so getestet, als ob ein Benutzer ihn verwendet. (Senden eines Emails)
+Zur Überwachung von Systemen und Services werden die Tool-Kits Nagios und Alexa verwendet. Während Nagios den Zustand von Systemen über das Auslesen von Logs und Statusabfragen an die Systeme selbst aufzeichnet, führt Alexa sogenannte Real-User Experience Tests durch. Dabei wird der zu testende Service so getestet, als ob ein Benutzer ihn verwendet.
 
 Die aggregierten Zustandsdaten eines Services können in einem Business-Processes zusammengefasst werden. Dabei wird nicht nur der Zustand des zu überwachenden Services mit eingezogen, sondern auch die Abhängigkeiten, wie zum Beispiel Netzwerk, Firewall-Auslastung oder Temperatur im Datacenter.
 Ein Business-Process repräsentiert also die Funktionsfähigkeit eines Services. (z.B. SAP oder Email)
