@@ -21,27 +21,15 @@ Auseinandersetzung mit der eigenen Arbeit statt. Typische Fragen sind:
 -->
 
 ## Überprüfung
-Anschliessend ist die erfüllung der Anforderungen aufgeführt.
+Die Überpüfung, ob duch den Prororypen ein Mehrwert erzielt wurde, soll anhand der beiden nachstehenden Fragen überprüft werden.
 
--------------------------------------------------------------------------------
-__A__   __Titel__                           __Erfüllung__
-------- ----------------------------------- -----------------------------------
-A-01    Statusanzeigen                      ja
-A-02    Fehleranzeige                       ja
-A-03    vergangene Fehlerfälle              ja
-A-04    Verwendung eines XML DBMS           ja
-A-05    Web-basiert                         ja
-A-06    Services                            ja
--------------------------------------------------------------------------------
-
-## Beispielabfragen
-Es soll überprüft werden, welchen Mehrwert durch den Prototyp erzielt werden konnte. Es werden zwei Fragen gestellt, die ohne den Prototypen durch den Mitarbeiter nicht beantwortet werden können.
-
-### SAP funktioniert nicht richtig!!!
+__SAP funktioniert nicht richtig!!!__
 Ohne die in dieser Arbeit geschaffene Statusübersicht, musste der Mitarbeiter der IT-Abteilung anrufen und nachfragen, ob das Problem bereits festgestellt wurde. Nun kann er aber selbst erkennen, dass das Problem bereits vom System detektiert wurde und muss nur noch in dringenden Fällen die IT kontaktieren. 
 
-### Gestern hat das doch auch schon nicht funktioniert?
+__Gestern hat das doch auch schon nicht funktioniert?__
 Die Statusübersicht gewährt eine Übersicht der vergangenen 48 Stunden. Jeder Mitarbeiter kann nachvollziehe, wann das letzte mal ein Fehler bei einem System aufgetreten ist. Missverständnisse wie "alles war kaputt" oder "das hat gestern aber nicht funktioniert" sind ausgeräumt. Erklärungen und Rechtfertigungen seitens der IT, wie "doch, doch - das hat gestern funktioniert" entfallen komplett.
+
+Die geforderte Vereinfachung des Zugriffs auf Statusinformationen der IT-Infrastruktur konnte erreicht werden. Informationen sind auch für ungeschultes Personal verständlich und einfach erreichbar.
 
 
 

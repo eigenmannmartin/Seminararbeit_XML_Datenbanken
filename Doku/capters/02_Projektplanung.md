@@ -2,17 +2,15 @@
 
 # Projektplanung
 
+Das Kapitel Projektplanung führt alle relevanten Infomrationen zur durchführungsdauer als auch zum Organisatorischen Rahmen auf.
+
 ## Projektplan
-Die Seminararbeit muss im Zeitraum von 11.03.2015 bis 09.06.2015 durchgeführt werden.
+Die Seminararbeit muss im Zeitraum von 11.03.2015 bis 09.06.2015 durchgeführt werden. Die Arbeit wurde in den Kalenderwochen 21 bis 23 durchgeführt.
 
 ## Zeitlicher Rahmen
-
-Der offizielle Projektstart erfolgt mit dem Kick-Off am 11.03.2015. Am 16.06.2015 finden die Präsentationen statt. 
-
-Der Aufwand für die Bearbeitung der Seminararbeit soll mindestens 50 Stunden umfassen. 
+Der offizielle Projektstart erfolgt mit dem Kick-Off am 11.03.2015. Am 16.06.2015 finden die Abschlusspräsentationen statt. 
 
 ## Organisatorischer Rahmen
-
 In der nachstehenden Tabelle sind alle massgeblich involvierten Personen aufgeführt.
 
 

@@ -2,31 +2,7 @@
 
 # Konzept
 
-<!-- Eigener Beitrag zur Lösung des Problems
-Hier steht der eigene Beitrag zur Lösung der Aufgaben und Probleme im Vordergrund,
-d.h.
-- Beschreibung des verwendeten oder zur Verfügung gestandenen Materials [check]
-- Begründung, warum dieses Material herangezogen wurde, zum Beispiel auf Grund von Standardliteratur, Fachartikeln oder eigener Berufserfahrung [check]
-- Aufzeigen von Ungenauigkeiten, Rahmenbedingungen und Schwierigkeiten bei der Problemlösung [Messresultate abhängig vom Wetter]
-- Beschreibung des methodischen Vorgehens, des Experiments usw. [Prototyp]
-- Zusammenfassung der Ergebnisse aus dem eigenen Beitrag
--->
-
-
-
-<!--
-
-- Konzeption eines Prototypen. Der Prototyp muss den Status der IT-Systeme (SAP, Fileserver, Netzwerk, Entwicklungsserver, Repository-Server) sowie Fehlerfälle der der letzten 48h anzeigen.
-- Konzeption der Schemata und Abfragen
-- Konzeption der Architektur der Anwendung
-
-
-- Datenbank Schemata
-- Architektur Schemata
-- Datenflussdiagramm
-
--->
-In diesem Kapitel wird das System entworfen, welches den Anforderungen aus der Anforderungsanalyse entspricht.
+In diesem Kapitel wird ein System entworfen, welchen den Anforderungen aus den Kapiteln [Einleitung] und [Recherche] gerecht wird. Dazu werden zuerst ein grobes Design der Software erarbeitet und anschliessend konkretisiert. 
 
 ## Design Ansätze
 Zur Lösung der Aufgabenstellung sind nachfolgend zwei möglich Design-Ansätze aufgezeigt. Diese werden kurz beleuchtet und der am besten passenden ausgewählt.
@@ -44,7 +20,7 @@ Da die Single Tier Application auf einem eigenen Server läuft und nur die API z
 
 ## Design der Software
 Der Prototyp besteht aus den beiden Bausteinen Backend, XML DBMS und Frontend.
-Nur die Backend-Komponente greift auf Neteye zu. 
+Nur die Backend-Komponente greift über eine Schnittstelle auf Neteye zu. 
 
 ![Komponenten](img/components.jpg)
 
@@ -114,3 +90,7 @@ Um die vergangenen Fehlerfälle aus zu lesen, wird das resultat zusätzlich auf 
 <!-- 
 ```
  -->
+
+
+## Abschluss Konzept
+Das konkretisierte Konzept eines Prototypen, welcher Statusinformationen der IT-Infrastruktur vom Neteye ausliest und in einem nativen XML-Datenbankmanagement System abspeichert, konnte in sofern erstellt werden, dass darauf aufbauen im nächsten Kapitel [Implementation] der Prototyp umgesetzt werden kann.

@@ -2,58 +2,38 @@
 
 # Einleitung
 
-## Motivation und Fragestellung
+Die vorliegende Arbeit wird im Rahmen des Seminars XML Datenbanksysteme durchgeführt. In diesem ersten Kapitel wird kurz in das Zeil sowie Abgrenzung und Vorgehen dieser Arbeit eingeführt. 
+
+## Thema
+
+Ziel der Arbeit ist es den Zustand der IT-Systeme auf einer Webseite zu publizieren, so dass Mitarbeiter eine Übersichtliche Zusammenfassung der Lauffähigkeit der IT-Systeme erhalten.
+
+## Ausgangslage
+
+Im Unternehmen existiert ein Überwachungssystem (Neteye) welches das Verhalten von der IT-Infrastruktur misst. Auf Grund dieser regelmässigen Vermessung kann der Zustand Services abgeleitet werden und Fehlfunktionen erkannt werden.
+Der aktuelle Zustand aller Services wird im Interface von Neteye dargestellt. Diese Darstellung ist jedoch sehr unübersichtlich und nur für geschultes Personal geeignet.
+Darüber hinaus ist eine zusammenfassende Auflistung der vergangenen Fehlfunktionen nicht möglich.
 
 
+## Ziele der Arbeit
 
-## Aufgabenstellung
+Ziel der Arbeit ist es, für alle Mitarbeiter Informationen über den aktuellen Zustand der IT-Infrastruktur zugänglich zu machen.
 
-Im Folgenden ist die Aufgabenstellung gemäss EBS aufgeführt.
+Im Verlaufe der Arbeit soll gezeigt werden, dass unter Verwendung eines XML-DBMS die Zustände der IT-Infrastruktur abgespeichert und verwaltet werden könne, so dass ein WEB-GUI implementiert werden kann, welche sowohl die Zustände der wichtigsten Services sowie aufgetretene Fehlfunktionen anzeigt.
 
-### Thema
+Neben der Erarbeitung der technischen Grundlagen muss auch eine kurzen Analyse der bereits vorhandenen Möglichkeiten der Mitarbeiter, Informationen über den aktuellen Zustand der IT-Infrastruktur zu erlangen, durchgeführt werden.
 
-Ziel der Arbeit ist es den Zustand der IT-Systeme auf einer Webseite zu publizieren, so dass Mitarbeiter eine Übersichtliche Zusammenfassung der Lauffähigkeit der Systeme erhalten.
+## Abgrenzung
 
-### Ausgangslage
+Die Arbeit konzentriert sich auf die Lösung des Datenhaltungsproblems. Auf eine Anforderungsanalyse an den zu implementierenden Prototypen wird deshalb verzichtet.
 
-Im Unternehmen existiert ein Überwachungssystem (Neteye) welches das Verhalten von der IT-Infrastruktur misst. 
-
-Mitarbeiter (keine IT-Mitarbeiter) können bis anhin den aktuellen Zustand der IT-Systeme nicht abfragen, da Neteye dafür keine geeigneten Funktionalitäten bietet.
-
-Dies führt  einerseits zu Unsicherheiten bei den Mitarbeitern und einem schlechterem Ruf der IT, da nicht transparent kommuniziert wird, wann welche Systeme nicht ordnungsgemäss funktioniert haben.
+Anforderungen an Design und Usability stehen im Hintergrund und werden im Rahmen dieser Arbeit explizit nicht betrachtet.
 
 
-### Ziele der Arbeit
+## Vorgehen
 
-Alle Mitarbeiter sollen auf einer zentralen Webseite den aktuellen Status aller IT-Systeme abfragen können. Darüber hinaus muss ein Mitarbeiter erkennen können ob Fehler in der Vergangenheit (letzte 48h) aufgetreten sind.
+Um das Datenhaltungsproblem zu lösen, müssen zuerst die Analyse der Problemstellung, sowie eine Erarbeitung der Technischen Grundlagen durchgeführt werden.
 
-Es soll gezeigt werden, dass dieses Ziel mit einem XML-DBMS realisiert werden kann.
+In einem zweiten Schritt wird die Konzeption des WEB-GUI und der darunter liegenden Logik durchgeführt und umgesetzt.
 
-### Aufgabenstellung
-
-A1 Recherche:
-- Erarbeitung der technischen Grundlagen
-- Problemanalyse (Welche Möglichkeiten zur Abfrage stehen Mitarbeitern bereits zur Verfügung? Woher und welche Daten können für die Problemlösung verwendet werden?)
-A2 Konzept:
-- Konzeption eines Prototypen. Der Prototyp muss den Status der IT-Systeme (SAP, Fileserver, Netzwerk, Entwicklungsserver, Repository-Server) sowie Fehlerfälle der der letzten 48h anzeigen.
-- Konzeption der Schemata und Abfragen
-- Konzeption der Architektur der Anwendung
-A3 Umsetzung:
-- Implementation eines Prototypen unter Verwendung eines XML-DBMS
-A4 Review:
-- Überprüfung des umgesetzten Konzepts. Erfüllt der Prototyp die Anforderung der Fragestellung?
-
-### Erwartete Resultate
-
-R1 Recherche:
-- Bestandsaufnahme und Anforderungsanalyse
-R2 Konzept:
-- Datenbank Schemata
-- Architektur Schemata
-- Datenflussdiagramm
-R3 Umsetzung:
-- Prototyp Server-Backend (Datenhaltung und Aggregation sowie Datenaufbereitung)
-- Prototyp Server-Frontend (einfaches Web-Gui)
-R4 Review:
-- Bewertungsergebnisse der Überprüfung des Konzepts
-- Exemplarische Beispielabfragen
+Im letzten Schritt wird die Erreichung der Ziele überprüft und ein Fazit gezogen.

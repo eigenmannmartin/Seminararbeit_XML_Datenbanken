@@ -1,16 +1,7 @@
 
 
-# Implementation Prototyp
-
-
-<!--
-
-- Implementation eines Prototypen unter Verwendung eines XML-DBMS
-
-- Prototyp Server-Backend (Datenhaltung und Aggregation sowie Datenaufbereitung)
-- Prototyp Server-Frontend (einfaches Web-Gui)
-
--->
+# Implementation
+In diesem werden die wichtigsten Eckpunkte der Umsetzung des Prototypen beleuchtet. Dabei wird neben der verwendeten Technologie auch auf Knackpunkte bei der Umsetzung eingegangen.
 
 ## Technologie Stack
 Um den Prototyp zu implementieren, wird auf Software und Framewoks von Dritten zurückgegriffen. In den folgenden Kapiteln werden die Funktion und der Auswahlgrund der Fremdsoftware erläutert.
@@ -35,6 +26,7 @@ __Apache__          Apache ist neben Nginx der am meisten verwendete Webserver
 Table: Technologie Stack
 
 ## Entwicklung
+In diesem Abschnitt sind die Knackpunkte der Umsetztung aufgeführt. Neben der Schnittstelle zum Neteye sind auch die einzelnen Layer des Backends beschreiben.
 
 ### Connect to Neteye
 Die von Neteye zur Verfügung gestellte API ermöglicht die Abfrage des gesamten Status jedes Services. Im Folgenden sind sowohl Abfrageparameter als auch Rückgabeparameter beschrieben. Die hinterlegte Benutzerkennung wurde eigens für diese Abfragen angelegt.
