@@ -84,7 +84,7 @@ doc("DB")//areas/area[areaname="Region"]//Check
 Um die vergangenen Fehlerfälle aus zu lesen, wird das Resultat zusätzlich auf den Service/State>0 geprüft und das Check-Datum limitiert.
 
 ``` {.xml}
-("DB")//areas/area[areaname="Region"]//Check[Date>""]//Service[State>0]
+doc("DB")//areas/area[areaname="Region"]//Check[Date>""]//Service[State>0]
     order by $checks/Date descending
 ``` 
 <!-- 

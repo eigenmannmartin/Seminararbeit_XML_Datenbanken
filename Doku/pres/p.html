@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Martin Eigenmann" />
+  <title>Seminar XML DB</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.min.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+    </style>
+    <link rel="stylesheet" href="reveal.js/css/theme/moon.css"/>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Seminar XML DB</h1>
+    <h2 class="author">Martin Eigenmann</h2>
+    <h3 class="date">Juni 2015</h3>
+</section>
+
+<section class="slide level1">
+
+<style type="text/css">
+    strong {
+        background: #FF5E99 none repeat scroll 0% 0%;
+        color: white;
+    }
+
+    img {
+        background-color: white !important;
+    }
+</style>
+<section id="aufgabenstellung" class="level2">
+<h2>Aufgabenstellung</h2>
+<p>Statusübersicht Datenhaltung im XML-DBMS</p>
+</section>
+<section id="section" class="level2">
+<h2></h2>
+<figure>
+<img src="img/nagios1.png" alt="Nagios" /><figcaption>Nagios</figcaption>
+</figure>
+</section>
+</section>
+<section id="ansätze" class="slide level1">
+<h1>Ansätze</h1>
+<ul>
+<li class="fragment">Integriert</li>
+<li class="fragment">eigener Server</li>
+</ul>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<section id="vorgehensweise" class="level2">
+<h2>Vorgehensweise</h2>
+<ul>
+<li class="fragment">API untersuchen</li>
+<li class="fragment">XML-DB entwerfen</li>
+<li class="fragment">Umsetzen</li>
+</ul>
+</section>
+<section id="ergebnis" class="level2">
+<h2>Ergebnis</h2>
+<figure>
+<img src="img/gui_screenshot.png" alt="Gui" /><figcaption>Gui</figcaption>
+</figure>
+</section>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<section id="xml-schema" class="level2">
+<h2>XML-Schema</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml"><span class="kw">&lt;areas&gt;</span>
+    <span class="kw">&lt;area&gt;</span>
+        <span class="kw">&lt;areaname&gt;&lt;/areaname&gt;</span>
+        <span class="kw">&lt;Check&gt;</span>
+            <span class="kw">&lt;Date&gt;&lt;/Date&gt;</span>
+            <span class="kw">&lt;Service&gt;</span>
+                <span class="kw">&lt;Servicename&gt;&lt;/Servicename&gt;</span>
+                <span class="kw">&lt;Performance&gt;&lt;/Performance&gt;</span>
+                <span class="kw">&lt;Infotext&gt;&lt;/Infotext&gt;</span>
+                <span class="kw">&lt;State&gt;&lt;/State&gt;</span>
+            <span class="kw">&lt;/Service&gt;</span>
+        <span class="kw">&lt;/Check&gt;</span>
+    <span class="kw">&lt;/area&gt;</span>
+<span class="kw">&lt;/areas&gt;</span></code></pre>
+<!-- 
+```
+ -->
+</section>
+<section id="abfragen" class="level2">
+<h2>Abfragen</h2>
+<pre class="sourceCode xml"><code class="sourceCode xml">doc(&quot;DB&quot;)//areas/area[areaname=&quot;Region&quot;]//Check
+    order by $checks/Date descending</code></pre>
+<!-- 
+```
+ -->
+<pre class="sourceCode xml"><code class="sourceCode xml">doc(&quot;DB&quot;)//areas/area[areaname=&quot;Region&quot;]//Check[Date&gt;&quot;&quot;]//Service[State&gt;0]
+    order by $checks/Date descending</code></pre>
+<!-- 
+```
+ -->
+</section>
+</section>
+<section id="fragen" class="slide level1">
+<h1>Fragen</h1>
+</section>
+    </div>
+  </div>
+
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.min.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+    </body>
+</html>
