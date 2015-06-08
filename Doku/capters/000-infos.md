@@ -10,7 +10,7 @@ author: Martin Eigenmann
 
 
 # Abstract
-Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet das lösen eins spezifisches Datenhaltungsprolems, mittels eines nativen XML-Datenbanksystems.
+Die Seminararbeit des Moduls Datenbanken und Informationssysteme betrachtet das Lösen eines spezifisches Datenhaltungsprolems, mittels eines nativen XML-Datenbanksystems.
 Gezeigt wird, dass unter Verwendung eines nativen XML-DMBS, ein WEB-GUI  erstellt werden kann, welches den aktuellen Systemzustand der IT-Infrastruktur, sowie vergangene Fehler, übersichtlich darstellt.
 
 

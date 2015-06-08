@@ -2,7 +2,7 @@
 
 # Projektplanung
 
-Das Kapitel Projektplanung führt alle relevanten Infomrationen zur Durchführungsdauer als auch zum Organisatorischen Rahmen auf.
+Das Kapitel Projektplanung führt alle relevanten Informationen zur Durchführungsdauer als auch zum Organisatorischen Rahmen auf.
 
 ## Projektplan
 Die Seminararbeit muss im Zeitraum von 11.03.2015 bis 09.06.2015 durchgeführt werden. Die Arbeit wurde in den Kalenderwochen 21 bis 23 durchgeführt.

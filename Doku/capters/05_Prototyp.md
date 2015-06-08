@@ -4,7 +4,7 @@
 In diesem Kapitel werden die wichtigsten Eckpunkte der Umsetzung des Prototypen beleuchtet. Dabei wird neben der verwendeten Technologie auch auf Knackpunkte bei der Umsetzung eingegangen.
 
 ## Technologie Stack
-Um den Prototyp zu implementieren, wird auf Software und Framewoks von Dritten zurückgegriffen. In den folgenden Kapiteln werden die Funktion und der Auswahlgrund der Fremdsoftware erläutert.
+Um den Prototyp zu implementieren wird auf Software und Framewoks von Dritten zurückgegriffen. In den folgenden Kapiteln werden die Funktion und der Auswahlgrund der Fremdsoftware erläutert.
 
 
 -------------------------------------------------------------
@@ -13,14 +13,14 @@ Software            Beschreibung/Auswahlgrund
 __PHP__             PHP ist eine der am weitesten verbreitetsten
                      Programmiersprachen im Bereich der Web-Entwicklung. Aufgrund der hervorragenden Kompatibilität mit bestehenden Systemen wird PHP verwendet.
 
-__eXist__           eXist ist ein sehr bekanntes und Einstiegs freundliches 
+__eXist__           eXist ist ein sehr bekanntes und einstiegsfreundliches 
                      XML DBMS. Darüber hinaus ist es wegen seiner freien Verfügbarkeit für dieses Projekt bestens geeignet.([@eXistPHP], [@eXistDB]) 
 
 __BootStrap__       Bootstrap ist das bekannteste CSS Framework der letzten
-                     Jahre. Eine sehr grosse Community, viele Plugins und grosse Flexibilität erlauben es schnell optisch ansprechende UIs zu erstellen.
+                     Jahre. Eine sehr grosse Community, viele Plugins und grosse Flexibilität erlauben es schnell ansprechende UIs zu erstellen.
 
-__Apache__          Apache ist neben Nginx der am meisten verwendete Webserver
-                     der sich durch seine hohe Konfigurierbarkeit und Stabilität auszeichnet. Aufgrund der Vorkenntnisse des Studenten im Bereich der Konfiguration von Apache, hat er sich für Apache entscheiden.
+__Apache__          Apache ist neben Nginx der am meisten verwendete 
+                    Webserver, der sich durch seine hohe Konfigurierbarkeit und Stabilität auszeichnet. Aufgrund der Vorkenntnisse des Studenten im Bereich der Konfiguration von Apache, hat er sich für Apache entscheiden.
 
 -------------------------------------------------------------
 Table: Technologie Stack
@@ -62,7 +62,7 @@ Table: Post-Parameters
 
 
 ### Modulare Implementation
-Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. Dadurch wir eine Separation der Zuständigkeit erreicht und die Warbarkeit wird deutlich erhöht.
+Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. Dadurch wird eine Separation der Zuständigkeit erreicht und die Wartbarkeit wird deutlich erhöht.
 
 #### DB-Layer
 Der DB-Layer verfügt über insgesamt drei öffentliche Funktionen (public functions).
@@ -100,6 +100,6 @@ Im Konfigurations-Layer werden die abzufragenden Services hinterlegt.
 
 ## Grafische Umsetzung
 
-Die Grafische Oberfläche ist zweigeteilt. (Abbildung {@fig:gui} ) Im oberen Bereich sind die aktuellen Zustände der Services sichtbar. Im unteren Bereich, mit der Überschrift Fehlerfälle sind die Fehlerfälle der vergangenen 48 Stunden aufgeführt.
+Die Grafische Oberfläche ist zweigeteilt. (Abbildung {@fig:gui}) Im oberen Bereich sind die aktuellen Zustände der Services sichtbar. Im unteren Bereich, mit der Überschrift "Fehlerfälle" sind die Fehlerfälle der vergangenen 48 Stunden aufgeführt.
 
 ![Übersicht](img/gui_screenshot.png) {#fig:gui}

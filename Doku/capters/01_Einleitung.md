@@ -2,7 +2,7 @@
 
 # Einleitung
 
-Die vorliegende Arbeit wird im Rahmen des Seminars XML Datenbanksysteme durchgeführt. In diesem ersten Kapitel wird kurz in das Zeil, sowie Abgrenzung und Vorgehen dieser Arbeit eingeführt. 
+Die vorliegende Arbeit wird im Rahmen des Seminars XML Datenbanksysteme durchgeführt. In diesem ersten Kapitel wird kurz in das Ziel, sowie Abgrenzung und Vorgehen dieser Arbeit eingeführt. 
 
 ## Thema
 Ziel der Arbeit ist es den Zustand der IT-Systeme auf einer Webseite zu publizieren, so dass Mitarbeiter eine übersichtliche Zusammenfassung der Lauffähigkeit der IT-Systeme erhalten.
