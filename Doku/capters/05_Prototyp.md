@@ -65,7 +65,7 @@ Table: Post-Parameters
 Das Backend ist, wie nachfolgend beschrieben, Layer orientiert implementiert. Dadurch wird eine Separation der Zuständigkeit erreicht und die Wartbarkeit wird deutlich erhöht.
 
 #### DB-Layer
-Der DB-Layer verfügt über insgesamt drei öffentliche Funktionen (public functions).
+Der DB-Layer verfügt über insgesamt drei öffentliche Funktionen (public functions). Diese drei  Funktionen sind in der Tabelle "öffentliche Funktionen" beschrieben.
 
 -------------------------------------------------------------
 Funktionsname       Beschreibung
@@ -81,7 +81,7 @@ __readpaststate__   Die Funktion gibt ein Array mit den aktuellsten
 __insert__          Die Funktion fügt einen neuen Systemstati der 
                     Datensammlung hinzu.
 -------------------------------------------------------------
-
+Table: öffentliche Funktionen
 
 Die Abfragen auf die Tabelle werden mit einem einfachen Xquery-select durchgeführt. [@xQuery]
 
